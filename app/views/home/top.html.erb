@@ -8,4 +8,8 @@
       </div>
     <% end %>
   </div>
+
+  <% @elements.each do|element| %>
+    <p><%= element.inner_text %></p>
+  <% end %>
 </div>
