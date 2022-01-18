@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QuniApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-logo">
+        <%= link_to("九大攻略", "/top") %>
+      </div>
+      <ul class="header-menus">
+        <li>
+          <%= link_to("ログイン", "/login") %>
+        </li>
+        <li>
+          <%= link_to("新規登録", "/new") %>
+        </li>
+        <li>
+          <%= link_to("つぶやく", "/post") %>
+        </li>
+        <li>
+          <%= link_to("バス", "/bus") %>
+        </li>
+        <li>
+          <%= link_to("図書館", "/library") %>
+        </li>
+        <li>
+          <%= link_to("学食", "/cafe") %>
+        </li>
+        <li>
+          <%= link_to("売店", "/shop") %>
+        </li>
+      </ul>
+    </header>
+    #footerがheaderが隠れている
+    <footer>
+      <div class="header-logo">
+        <%= link_to("九大攻略", "/top") %>
+      </div>
+    </footer>
+    <%= yield %>
+  </body>
+</html>

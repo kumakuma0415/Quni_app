@@ -1,0 +1,26 @@
+<div class="main posts-index">
+  <div class="container">
+    <% @posts.each do |post| %>
+      <div class="posts-index-item">
+        <%= post.content %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+#上で隠れている
+<ul class="post-menus">
+    <li>
+        <%= link_to("みんなの投稿", "/post") %>
+    </li>
+    <li>
+        <%= link_to("投稿する", "/###") %>
+    </li>
+    <li>
+        <%= link_to("過去の投稿", "/###") %>
+    </li>
+    <li>
+        <%= link_to("設定", "/###") %>
+    </li>
+</ul>
