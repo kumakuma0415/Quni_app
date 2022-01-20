@@ -32,12 +32,26 @@
         </li>
       </ul>
     </header>
-    #footerがheaderが隠れている
+  
+    <main>
+      <%= yield %>
+    </main>
+
     <footer>
-      <div class="header-logo">
+      <div class="footer-logo">
         <%= link_to("九大攻略", "/top") %>
       </div>
+      <ul class="footer-menus">
+        <li>
+          <%= link_to("Campusmate", "https://ku-portal.kyushu-u.ac.jp/campusweb/top.do") %>
+        </li>
+        <li>
+          <%= link_to("Moodle", "https://moodle.s.kyushu-u.ac.jp/") %>
+        </li>
+        <li>
+          <%= link_to("九大生協HP", "http://www.coop.kyushu-u.ac.jp/") %>
+        </li>
+      </ul>
     </footer>
-    <%= yield %>
   </body>
 </html>
