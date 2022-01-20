@@ -1,4 +1,5 @@
-<% @elements.each do|element| %>
-  <p><%= element.inner_text %></p>
-  <br>
+<% @menus.each do |menu| %>
+    <div class="menu">
+        <%= menu.name %>
+    </div>
 <% end %>
