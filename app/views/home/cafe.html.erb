@@ -1,5 +1,19 @@
-<% @menus.each do |menu| %>
-    <div class="menu">
-        <%= menu.name %>
-    </div>
-<% end %>
+<ul class="cafe-list">
+    <li>
+        <%= link_to("詳しい営業時間のご案内", "http://www.coop.kyushu-u.ac.jp/data/ontime202010.pdf") %>
+    </li>
+    <li>
+        <%= link_to("今週の定食メニューを見る", "http://www.coop.kyushu-u.ac.jp/cgi-bin/teishokuurl.cgi?location=on") %>
+    </li>
+    <li>
+        <%= link_to("今日の出食予定表を見る", "http://www.coop.kyushu-u.ac.jp/shokudou/month_menu.html") %>
+    </li>
+    <li>
+        <%= link_to("食堂部HP", "http://www.coop.kyushu-u.ac.jp/shokudoubu.html") %>
+    </li>
+</ul>
+
+<p>今日の昼の定食</p>
+<%= @today_menu_lunch %>
+<p>今日の夜の定食</p>
+<%= @today_menu_dinner %>

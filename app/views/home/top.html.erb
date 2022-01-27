@@ -1,12 +1,144 @@
-<h1>ようこそ九大攻略へ！</h1>
+<div class="top.html">
+  <div class="left">
+    <div class="top-content">
+      <h1>ようこそ九大攻略へ！</h1>
+    </div>
 
-<div class="main posts-index">
-  <div class="container">
-    <% @posts.each do |post| %>
-      <div class="posts-index-item">
-        <%= post.content %>
-      </div>
-    <% end %>
+    <ul class="site-list">
+      <li>
+        <a href="https://ku-portal.kyushu-u.ac.jp/campusweb/top.do" class="btn btn-campusmate">Campumateにログイン</a>    
+      </li>
+      <li>
+        <a href="https://moodle.s.kyushu-u.ac.jp/" class="btn btn-moodle">Moodleにログイン</a>
+      </li>
+      <li>
+        <a href="http://www.coop.kyushu-u.ac.jp/" class="btn btn-seikyou">九大生協HPを確認する</a>
+      </li>
+    </ul>
+
+    <div class="part wrdbus">
+      <h1>現在のバス</h1>
+      <p>昭和バス</p>
+      <p>九大ビッグオレンジ～九大学研都市駅</p>
+      <p><%= @showa_toStation %></p>
+      <p><%= @showa_toStation2 %></p>
+
+      <p>九大学研都市駅～九大ビッグオレンジ</p>
+      <p><%= @showa_toUniversity %></p>
+      <p><%= @showa_toUniversity2 %></p>
+      
+      <a href=<%= @hp_showa_toStation %>>
+        今の時間のバス
+      </a>
+      <a href="http://showa-bus.jp/" class="small-btn btn-showa">HPを確認する</a>
+      <p>西鉄バス</p>
+      <p>九大ビッグオレンジ～天神ソラリアステージ前（７）</p>
+      <p><%= @nishitetsu_toTenjin0 %>発→<%= @nishitetsu_toTenjin1 %>着</p>
+      <p><%= @nishitetsu_toTenjin2 %>発→<%= @nishitetsu_toTenjin3 %>着</p>
+      <%# <p><%= @nishitetsu_toTenjin2 </p> %>
+      <a href=<%= @hp_nishitetsu_toTenjin %>>
+        今の時間のバス
+      </a>
+      <a href="https://jik.nishitetsu.jp/" class="small-btn btn-nishitetu">HPを確認する</a>
+    </div>
+
+    <div class="part library">
+      <h1>図書館</h1>
+      <p>中央図書館</p>
+      <a href="https://www.lib.kyushu-u.ac.jp/ja/libraries/central" class="small-btn btn-chuou">HPを確認する</a>
+      <a href="https://www.lib.kyushu-u.ac.jp/ja/libraries/central/hours" class="small-btn btn-chuou">開館カレンダー</a>
+      <a href="https://www.lib.kyushu-u.ac.jp/ja/activities/usage_ref/re" class="small-btn btn-chuou">貸し出し更新・予約確認</a>
+      
+
+      <p>理系図書館</p>
+      <a href="https://www.lib.kyushu-u.ac.jp/ja/libraries/scitech" class="small-btn btn-rikei">HPを確認する</a>
+      <p>
+      医学図書館
+      芸術工学図書館
+      筑紫図書館
+      </p>
+    </div>
+
+    <div class=" part cafe">
+      <h1>学食</h1>
+      <p>今日の昼の定食</p>
+      <%= @today_menu_lunch %>
+      <p>今日の夜の定食</p>
+      <%= @today_menu_dinner %>
+      
+      <p>伊都　イーストゾーン
+        <a href="/cafe" class="small-btn btn-cafe">→ 詳しく見る</a>
+      </p>
+      <p>ビッグスカイ</p>
+      <p>L-Café</p>
+      
+      <p>伊都　センターゾーン
+        <a href="/cafe" class="small-btn btn-cafe">→ 詳しく見る</a>
+      </p>
+      <p>Big Orange Restaurant</p>
+      <p>QASIS</p>
+      <p>Main Dining（１階食堂）</p>
+      <p>Big Dining（地階食堂）</p>
+      
+
+      <p>伊都　ウエストゾーン
+        <a href="/cafe" class="small-btn btn-cafe">→ 詳しく見る</a>
+      </p>
+      <p>Libca（伊都図書館カフェ）</p>
+      <p>アグリダイニング</p>
+      <%= @open %>
+      <p>今日の営業時間
+      <%= @open_time %>
+      </p>
+      <p>ビッグどら食堂</p>
+
+      <p>その他
+        <a href="/cafe" class="small-btn btn-cafe">→ 詳しく見る</a>
+      </p>
+      <p>医系食堂</p>
+    </div>
+
+    <div class="part shop">
+      <h1>売店</h1>
+
+      <p>伊都　イーストゾーン
+        <a href="http://www.coop.kyushu-u.ac.jp/koubaibu.html" class="small-btn btn-cafe">→ 詳しく見る</a>
+      </p>
+      <p>イースト１号館店</p>
+      <p>中央図書館店</p>
+      <p>伊都協奏館店</p>
+
+      <p>伊都　センターゾーン
+        <a href="http://www.coop.kyushu-u.ac.jp/koubaibu.html" class="small-btn btn-cafe">→ 詳しく見る</a>
+      </p>
+      <p>伊都皎皎舎店</p>
+      <p>九州大学アンテナショップＱ-Ｓｈｏｐ</p>
+
+      <p>伊都　ウエストゾーン
+        <a href="http://www.coop.kyushu-u.ac.jp/koubaibu.html" class="small-btn btn-cafe">→ 詳しく見る</a>
+      </p>
+      <p>伊都コンビニ店</p>
+      <p>ウエスト５号館</p>
+      <p>ビッグどら店</p>
+      
+      <p>その他
+        <a href="http://www.coop.kyushu-u.ac.jp/koubaibu.html" class="small-btn btn-cafe">→ 詳しく見る</a>
+      </p>
+      <p>医学部購買書籍店</p>
+      <p>大橋店</p>
+      <p>筑紫店</p>
+    </div>
+
+    <p>ページの上部に戻る</p>
+  </div>
+
+  <div class="right">
+      <% @posts.each do |post| %>
+        <div class="posts-index-item">
+          <%= post.content %>
+        </div>
+      <% end %>
+  </div>
   </div>
 
 </div>

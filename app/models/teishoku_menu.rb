@@ -1,0 +1,2 @@
+class TeishokuMenu < ApplicationRecord
+end

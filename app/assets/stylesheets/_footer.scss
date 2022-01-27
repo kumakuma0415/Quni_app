@@ -1,0 +1,43 @@
+//footer
+footer {
+    height: 64px;
+    z-index: 1;
+    background-color: darkred;
+    width: 100%;
+  
+    margin-top: auto;
+    // position: absolute;/*←絶対位置*/
+    // bottom: 0; /*下に固定*/
+  }
+  
+  .footer-logo {
+  float: left;
+  padding-left: 20px;
+  color: black;
+  font-size: 22px;
+  line-height: 64px;
+  }
+  
+  .footer-logo a {
+    font-size: 22px;
+  }
+  
+  .footer-menus {
+    float: right;
+    padding-right: 20px;
+  }
+  
+  .footer-menus li {
+    list-style: none;
+    float: left;
+    line-height: 64px;
+    font-size: 13px;
+    color: black;
+    padding-left: 15px;
+  }
+    
+  .footer-menus a {
+    float: left;
+    font-size: 13px;
+    color: black;
+  }

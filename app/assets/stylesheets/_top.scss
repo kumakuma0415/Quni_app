@@ -1,0 +1,109 @@
+// top
+.main {
+    top: 64px;
+    width: 570px;
+    height: auto;
+    min-height: 100%;
+    background-color: #f5f8fa;
+    margin-bottom: 20px;
+  }
+  // ↑をまたイジる
+  
+  .site-list {
+    display: flex;
+  }
+  
+  .site-list li {
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .part {
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #212529;
+    border-radius: 0.5rem;
+  }
+  
+  .small-btn {
+    font-size: .1rem;
+    font-weight: 600;
+    line-height: .1;
+    position: relative;
+    display: inline-block;
+    padding: 1rem 1rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #212529;
+    border-radius: 0.5rem;
+  }
+  
+  .btn-campusmate,
+  .btn-moodle,
+  .btn-seikyou,
+  .btn-showa,
+  .btn-nishitetu,
+  .btn-chuou,
+  .btn-rikei,
+  .btn-cafe {
+    color: #fff;
+    background-color: #eb6100;
+  }
+  
+  .btn-campusmate:hover,
+  .btn-moodle:hover,
+  .btn-seikyou:hover,
+  .btn-showa:hover,
+  .btn-nisihtetu:hover,
+  .btn-chuou:hover,
+  .btn-rikei:hover,
+  .btn-cafe:hover { 
+    color: #fff;
+    background-color: #f56500;
+  }
+  
+  // .top.html {
+  //   display: flex;
+  // }
+  
+  .left {
+    float: left;
+    // width: 50%;
+  }
+  
+  .right {
+    float: right;
+    // width: 10%;
+  }
+  
+  .posts-index-item {
+    width: 300px;
+  }

@@ -10,13 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_20_041743) do
-
-  create_table "menus", force: :cascade do |t|
-    t.text "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 2022_01_23_175906) do
 
   create_table "posts", force: :cascade do |t|
     t.text "content"
@@ -29,7 +23,13 @@ ActiveRecord::Schema.define(version: 2022_01_20_041743) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "shops", force: :cascade do |t|
+  create_table "teishoku_menu2s", force: :cascade do |t|
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "teishoku_menus", force: :cascade do |t|
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
