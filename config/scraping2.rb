@@ -8,7 +8,7 @@ class Scraping2
         elements.each do |element|
           menu = Menu.new                      #Fishは任意のクラス、fishは任意のインスタンス
           menu.content = element.inner_text
-          menu.save
+          .save
         end
         # 夕食分を表示する
     end

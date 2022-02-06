@@ -10,48 +10,8 @@
   </head>
 
   <body>
-    <header>
-      <div class="header-logo">
-        <%= link_to("九大攻略", "/top") %>
-      </div>
-      <ul class="header-menus">
-        <li>
-          <%= link_to("つぶやく", "/post") %>
-        </li>
-        <li>
-          <%= link_to("バス", "/bus") %>
-        </li>
-        <li>
-          <%= link_to("図書館", "/library") %>
-        </li>
-        <li>
-          <%= link_to("学食", "/cafe") %>
-        </li>
-        <li>
-          <%= link_to("売店", "http://www.coop.kyushu-u.ac.jp/koubaibu.html") %>
-        </li>
-      </ul>
-    </header>
-  
     <main>
       <%= yield %>
     </main>
-
-    <footer>
-      <div class="footer-logo">
-        <%= link_to("九大攻略", "/top") %>
-      </div>
-      <ul class="footer-menus">
-        <li>
-          <%= link_to("Campusmate", "https://ku-portal.kyushu-u.ac.jp/campusweb/top.do") %>
-        </li>
-        <li>
-          <%= link_to("Moodle", "https://moodle.s.kyushu-u.ac.jp/") %>
-        </li>
-        <li>
-          <%= link_to("九大生協HP", "http://www.coop.kyushu-u.ac.jp/") %>
-        </li>
-      </ul>
-    </footer>
   </body>
 </html>

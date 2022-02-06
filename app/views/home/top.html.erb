@@ -2,143 +2,350 @@
   <div class="left">
     <div class="top-content">
       <h1>ようこそ九大攻略へ！</h1>
+
+      <ul class="site-list">
+        <li>
+          <a href="https://ku-portal.kyushu-u.ac.jp/campusweb/top.do" class="small-btn btn-campusmate">Campumateにログイン</a>    
+        </li>
+        <li>
+          <a href="https://moodle.s.kyushu-u.ac.jp/" class="small-btn btn-moodle">Moodleにログイン</a>
+        </li>
+        <li>
+          <a href="http://www.coop.kyushu-u.ac.jp/" class="small-btn btn-seikyou">九大生協HPを確認する</a>
+        </li>
+      </ul>
     </div>
 
-    <ul class="site-list">
-      <li>
-        <a href="https://ku-portal.kyushu-u.ac.jp/campusweb/top.do" class="btn btn-campusmate">Campumateにログイン</a>    
-      </li>
-      <li>
-        <a href="https://moodle.s.kyushu-u.ac.jp/" class="btn btn-moodle">Moodleにログイン</a>
-      </li>
-      <li>
-        <a href="http://www.coop.kyushu-u.ac.jp/" class="btn btn-seikyou">九大生協HPを確認する</a>
-      </li>
-    </ul>
+     
+    <div class="company-items">
+      <div class="part showa">
+        <h2>
+          昭和バス
+          <a href="http://showa-bus.jp/" class="small-btn btn-showa">HPを確認する</a>
+        </h2>
+        
+        <div class="bus-items">
+          <div class="bus-item">
+            <p class="bus-theme">九大ビッグオレンジ～九大学研都市駅</p>
+            <a class="btn-showa small-btn" href=<%= @hp_showa_toStation %>>
+              次に来るバス 詳しく見る↓
+            </a>
+            <p><%= @showa_toStation0 %> ➡ <%= @showa_toStation1 %></p>
+            <p><%= @showa_toStation2 %> ➡ <%= @showa_toStation3 %></p>
+          </div>
 
-    <div class="part wrdbus">
-      <h1>現在のバス</h1>
-      <p>昭和バス</p>
-      <p>九大ビッグオレンジ～九大学研都市駅</p>
-      <p><%= @showa_toStation %></p>
-      <p><%= @showa_toStation2 %></p>
+          <div class="bus-item">
+            <p class="bus-theme">九大学研都市駅～九大ビッグオレンジ</p>
+            <a class="btn-showa small-btn" href=<%= @hp_showa_toUniversity %>>
+              次に来るバス 詳しく見る↓
+            </a>
+            <p><%= @showa_toUniversity0 %> ➡ <%= @showa_toUniversity1 %></p>
+            <p><%= @showa_toUniversity2 %> ➡ <%= @showa_toUniversity3 %></p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="part nishitetsu">
+        <h2>
+          西鉄バス
+          <a href="https://jik.nishitetsu.jp/" class="small-btn btn-nishitetu">HPを確認する</a>
+        </h2>
+        <div class="bus-item">
+          <p class="bus-theme">九大ビッグオレンジ～天神ソラリアステージ前</p>
+          <div class="btn-time">
+            <a class="btn-nishitetu small-btn" href=<%= @hp_nishitetsu_toTenjin %>>
+              詳しく見る→
+            </a>
+            <p class="time-margin"><%= @nishitetsu_toTenjin0 %>発 ➡ <%= @nishitetsu_toTenjin1 %>着　<%= @nishitetsu_toTenjin2 %>発 ➡ <%= @nishitetsu_toTenjin3 %>着</p>
+          </div>
+        </div>
+        <div class="bus-item">
+          <p class="bus-theme">九大ビッグオレンジ～博多駅センタービル前Ｅ</p>
+          <div class="btn-time">
+            <a class="btn-nishitetu small-btn" href=<%= @hp_nishitetsu_toTenjin %>>
+              詳しく見る→
+            </a>
+            <p class="time-margin"><%= @nishitetsu_toTenjin0 %>発 ➡ <%= @nishitetsu_toHakata1 %>着　<%= @nishitetsu_toTenjin2 %>発 ➡ <%= @nishitetsu_toHakata3 %>着 </p>
+          </div>
+        </div>
 
-      <p>九大学研都市駅～九大ビッグオレンジ</p>
-      <p><%= @showa_toUniversity %></p>
-      <p><%= @showa_toUniversity2 %></p>
-      
-      <a href=<%= @hp_showa_toStation %>>
-        今の時間のバス
-      </a>
-      <a href="http://showa-bus.jp/" class="small-btn btn-showa">HPを確認する</a>
-      <p>西鉄バス</p>
-      <p>九大ビッグオレンジ～天神ソラリアステージ前（７）</p>
-      <p><%= @nishitetsu_toTenjin0 %>発→<%= @nishitetsu_toTenjin1 %>着</p>
-      <p><%= @nishitetsu_toTenjin2 %>発→<%= @nishitetsu_toTenjin3 %>着</p>
-      <%# <p><%= @nishitetsu_toTenjin2 </p> %>
-      <a href=<%= @hp_nishitetsu_toTenjin %>>
-        今の時間のバス
-      </a>
-      <a href="https://jik.nishitetsu.jp/" class="small-btn btn-nishitetu">HPを確認する</a>
+        <div class="bus-item">
+          <p class="bus-theme">博多駅センタービル前Ｅ～九大ビッグオレンジ</p>
+          <div class="btn-time">
+            <a class="btn-nishitetu small-btn" href=<%= @hp_nishitetsu_toUniversity %>>
+              詳しく見る→
+            </a>
+            <p class="time-margin"><%= @nishitetsu_fromHakata_toUniversity0 %>発 ➡ <%= @nishitetsu_fromHakata_toUniversity1 %>着　<%= @nishitetsu_fromHakata_toUniversity3 %>発 ➡ <%= @nishitetsu_fromHakata_toUniversity4 %>着</p>
+          </div>
+        </div>
+
+        <div class="bus-item">
+          <p class="bus-theme">天神ソラリアステージ前～九大ビッグオレンジ</p>
+          <div class="btn-time">
+            <a class="btn-nishitetu small-btn" href=<%= @hp_nishitetsu_toUniversity %>>
+              詳しく見る→
+            </a>
+            <p class="time-margin"><%= @nishitetsu_toUniversity0 %>発 ➡ <%= @nishitetsu_toUniversity1 %>着　<%= @nishitetsu_toUniversity2 %>発 ➡ <%= @nishitetsu_toUniversity3 %>着</p> 
+          </div>
+        </div>
+      </div>
     </div>
+    
 
     <div class="part library">
-      <h1>図書館</h1>
-      <p>中央図書館</p>
-      <a href="https://www.lib.kyushu-u.ac.jp/ja/libraries/central" class="small-btn btn-chuou">HPを確認する</a>
-      <a href="https://www.lib.kyushu-u.ac.jp/ja/libraries/central/hours" class="small-btn btn-chuou">開館カレンダー</a>
-      <a href="https://www.lib.kyushu-u.ac.jp/ja/activities/usage_ref/re" class="small-btn btn-chuou">貸し出し更新・予約確認</a>
-      
 
-      <p>理系図書館</p>
-      <a href="https://www.lib.kyushu-u.ac.jp/ja/libraries/scitech" class="small-btn btn-rikei">HPを確認する</a>
-      <p>
-      医学図書館
-      芸術工学図書館
-      筑紫図書館
-      </p>
+      <ul>
+        <h1>図書館</h1>
+        <li class="library-btn-list"><a href="https://www.lib.kyushu-u.ac.jp/ja/activities/usage_ref/re" class="small-btn btn-chuou">貸し出し更新・予約確認</a></li>
+        <li class="library-btn-list"><a href="https://www.lib.kyushu-u.ac.jp/ja/libraries" class="small-btn btn-chuou">図書館HP</a></li>
+      </ul>
+
+      <div class="library-items">
+        <div class="library-item">
+          <p class="library-theme">中央図書館</p>
+          <p><%= @time_chuou %></p>
+          <a href="https://www.lib.kyushu-u.ac.jp/ja/libraries/central/hours" class="small-btn btn-chuou">開館カレンダー</a>
+        </div>
+
+        <div class="library-item">
+          <p class="library-theme">理系図書館</p>
+          <p><%= @time_rikei %></p>
+          <a href="https://www.lib.kyushu-u.ac.jp/ja/libraries/central/hours" class="small-btn btn-chuou">開館カレンダー</a>
+        </div>
+
+        <div class="library-item">        
+          <p class="library-theme">医学図書館</p>
+          <p><%= @time_igaku %></p>
+          <a href="https://www.lib.kyushu-u.ac.jp/ja/libraries/medical/hours" class="small-btn btn-chuou">開館カレンダー</a>
+        </div>
+
+        <div class="library-item">
+          <p class="library-theme">芸術工学図書館</p>
+          <p><%= @time_geijutsu %></p>
+          <a href="https://www.lib.kyushu-u.ac.jp/ja/libraries/design/hours" class="small-btn btn-chuou">開館カレンダー</a>
+        </div>
+        
+        <div class="library-item">
+          <p class="library-theme">筑紫図書館</p>
+          <p><%= @time_chikushi %></p>
+          <a href="https://www.lib.kyushu-u.ac.jp/ja/libraries/chikushi/hours" class="small-btn btn-chuou">開館カレンダー</a>
+        </div>
+      </div>
+      
     </div>
 
     <div class=" part cafe">
-      <h1>学食</h1>
-      <p>今日の昼の定食</p>
-      <%= @today_menu_lunch %>
-      <p>今日の夜の定食</p>
-      <%= @today_menu_dinner %>
-      
-      <p>伊都　イーストゾーン
-        <a href="/cafe" class="small-btn btn-cafe">→ 詳しく見る</a>
-      </p>
-      <p>ビッグスカイ</p>
-      <p>L-Café</p>
-      
-      <p>伊都　センターゾーン
-        <a href="/cafe" class="small-btn btn-cafe">→ 詳しく見る</a>
-      </p>
-      <p>Big Orange Restaurant</p>
-      <p>QASIS</p>
-      <p>Main Dining（１階食堂）</p>
-      <p>Big Dining（地階食堂）</p>
-      
+      <ul>
+        <h1>学食</h1>
+        <li class="cafe-btn-list"><a href="http://www.coop.kyushu-u.ac.jp/data/ontime202010.pdf" class="small-btn btn-cafe">詳しい営業時間のご案内</a></li>
+        <li class="cafe-btn-list"><a href="http://www.coop.kyushu-u.ac.jp/cgi-bin/teishokuurl.cgi?location=on" class="small-btn btn-cafe">今週の定食メニューを見る</a></li>
+        <li class="cafe-btn-list"><a href="http://www.coop.kyushu-u.ac.jp/shokudou/month_menu.html" class="small-btn btn-cafe">今日の出食予定表を見る</a></li>
+        <li class="cafe-btn-list"><a href="http://www.coop.kyushu-u.ac.jp/shokudoubu.html" class="small-btn btn-cafe">食堂HP</a></li>
+      </ul>
 
-      <p>伊都　ウエストゾーン
-        <a href="/cafe" class="small-btn btn-cafe">→ 詳しく見る</a>
-      </p>
-      <p>Libca（伊都図書館カフェ）</p>
-      <p>アグリダイニング</p>
-      <%= @open %>
-      <p>今日の営業時間
-      <%= @open_time %>
-      </p>
-      <p>ビッグどら食堂</p>
+      <p class="caution">※祝日・長期休業、また新型感染症による営業変更には対応しておりません。</p>
 
-      <p>その他
+      <div class="cafe-items">
+        <div class="cafe-lunch">
+          <p class="cafe-theme">今日の昼の定食</p>
+          <p class="lunch"><%= @today_menu_lunch %></p>
+        </div>
+        <div class="cafe-dinner">
+          <p class="cafe-theme">今日の夜の定食</p>
+          <p class="dinner"><%= @today_menu_dinner %></p>
+        </div>
+      </div>
+
+      
+      <p class="cafe-main-theme">伊都　イーストゾーン
         <a href="/cafe" class="small-btn btn-cafe">→ 詳しく見る</a>
       </p>
-      <p>医系食堂</p>
+
+      <div class="cafe-items">
+        <div class="cafe-item">
+          <p class="cafe-theme">ビッグスカイ　</p>
+          <p><%= @open_time_bigsky %></p>
+        </div>
+
+        <div class="cafe-item">
+          <p class="cafe-theme">L-Café　</p>
+          <p><%= @open_time_lcafe %></p>
+        </div>
+      </div>
+      
+      <p class="cafe-main-theme">伊都　センターゾーン
+        <a href="/cafe" class="small-btn btn-cafe">→ 詳しく見る</a>
+      </p>
+
+      <div class="cafe-items">
+        <div class="cafe-item">
+          <p class="cafe-theme">Big Orange Restaurant　</p>
+          <p><%= @open_time_bigorange %></p>
+        </div>
+        
+        <div class="cafe-item">
+          <p class="cafe-theme">QASIS　</p>
+          <p><%= @open_time_Qasis %></p>
+        </div>
+
+        <div class="cafe-item">
+          <p class="cafe-theme">Main Dining（１階食堂） </p>
+          <p><%= @open_time_bigdining %></p>
+        </div>
+
+        <div class="cafe-item">
+          <p class="cafe-theme">Big Dining（地階食堂） </p>
+          <p><%= @open_time_underground %></p>
+        </div>
+      </div>
+
+      <p class="cafe-main-theme">伊都　ウエストゾーン
+        <a href="/cafe" class="small-btn btn-cafe">→ 詳しく見る</a>
+      </p>
+
+      <div class="cafe-items">
+        <div class="cafe-item">
+          <p class="cafe-theme">Libca　</p>
+          <p><%= @open_time_libca %></p>
+        </div>
+
+        <div class="cafe-item">
+          <p class="cafe-theme">アグリダイニング　</p>
+          <p><%= @open_time_agri %></p>
+        </div>
+        
+        <div class="cafe-item">
+          <p class="cafe-theme">ビッグどら食堂　</p>
+          <p><%= @open_time_bigdora %></p>
+        </div>
+      </div>
+
+      <div class="cafe-item2">
+        <p class="cafe-main-theme">その他
+          <a href="/cafe" class="small-btn btn-cafe">→ 詳しく見る</a>
+        </p>
+        <div class="cafe-item ikei-idou">
+          <p class="cafe-theme">医系食堂　</p>
+          <p><%= @open_time_ikei %></p>
+        </div>
+      </div>
     </div>
 
     <div class="part shop">
-      <h1>売店</h1>
-
-      <p>伊都　イーストゾーン
-        <a href="http://www.coop.kyushu-u.ac.jp/koubaibu.html" class="small-btn btn-cafe">→ 詳しく見る</a>
-      </p>
-      <p>イースト１号館店</p>
-      <p>中央図書館店</p>
-      <p>伊都協奏館店</p>
-
-      <p>伊都　センターゾーン
-        <a href="http://www.coop.kyushu-u.ac.jp/koubaibu.html" class="small-btn btn-cafe">→ 詳しく見る</a>
-      </p>
-      <p>伊都皎皎舎店</p>
-      <p>九州大学アンテナショップＱ-Ｓｈｏｐ</p>
-
-      <p>伊都　ウエストゾーン
-        <a href="http://www.coop.kyushu-u.ac.jp/koubaibu.html" class="small-btn btn-cafe">→ 詳しく見る</a>
-      </p>
-      <p>伊都コンビニ店</p>
-      <p>ウエスト５号館</p>
-      <p>ビッグどら店</p>
+      <ul>
+        <li><h1>売店</h1></li>
+        <li><p class="caution">※祝日・長期休業、また新型感染症による営業変更には対応しておりません。</p></li>
+      </ul>
       
-      <p>その他
+      
+
+      <p class="shop-main-theme-east">伊都　イーストゾーン
         <a href="http://www.coop.kyushu-u.ac.jp/koubaibu.html" class="small-btn btn-cafe">→ 詳しく見る</a>
       </p>
-      <p>医学部購買書籍店</p>
-      <p>大橋店</p>
-      <p>筑紫店</p>
-    </div>
 
-    <p>ページの上部に戻る</p>
+      <div class="shop-items">
+        <div class="shop-item">
+          <p class="shop-theme">イースト１号館店 </p>
+          <p><%= @open_time_east1 %></p>
+        </div>
+
+        <div class="shop-item">
+          <p class="shop-theme">中央図書館店 </p>
+          <p><%= @open_time_chuoh %></p>
+        </div>
+
+        <div class="shop-item">
+          <p class="shop-theme">伊都協奏館店 </p>
+          <p><%= @open_time_ito %></p>
+        </div>
+      </div>
+
+      <p class="shop-main-theme">伊都　センターゾーン
+        <a href="http://www.coop.kyushu-u.ac.jp/koubaibu.html" class="small-btn btn-cafe">→ 詳しく見る</a>
+      </p>
+
+      <div class="shop-items">
+        <div class="shop-item2">
+          <p class="shop-theme">伊都皎皎舎店　</p>
+          <p>日常ゾーン　<%= @open_time_nichijo %>　勉学ゾーン　<%= @open_time_bengaku %></p>
+          <p>注文カウンター　<%= @open_time_chumon %>　旅行カウンター　<%= @open_time_ryokou %></p>
+        </div>
+
+        <div class="shop-item">
+          <p class="shop-theme">Ｑ-Ｓｈｏｐ　</p>
+          <p><%= @open_time_Qshop %></p>
+        </div>
+      </div>
+
+      <p class="shop-main-theme">伊都　ウエストゾーン
+        <a href="http://www.coop.kyushu-u.ac.jp/koubaibu.html" class="small-btn btn-cafe">→ 詳しく見る</a>
+      </p>
+
+      <div class="shop-items">
+        <div class="shop-item">
+          <p class="shop-theme">伊都コンビニ店　</p>
+          <p><%= @open_time_konbini %></p>
+        </div>
+
+        <div class="shop-item">
+          <p class="shop-theme">ウエスト５号館　</p>
+          <p><%= @open_time_west5 %></p>
+        </div>
+
+        <div class="shop-item">
+          <p class="shop-theme">ビッグどら店　</p>
+          <p><%= @open_time_bigdora2 %></p>
+        </div>
+      </div>
+      
+      <p class="shop-main-theme">その他
+        <a href="http://www.coop.kyushu-u.ac.jp/koubaibu.html" class="small-btn btn-cafe">→ 詳しく見る</a>
+      </p>
+      <div class="shop-items">
+        <div class="shop-item">
+          <p class="shop-theme">医学部購買書籍店　</p>
+          <p><%= @open_time_igakushop %></p>
+        </div>
+
+        <div class="shop-item">
+          <p class="shop-theme">大橋店　</p>
+          <p><%= @open_time_ohashi %></p>
+        </div>
+
+        <div class="shop-item">
+          <p class="shop-theme">筑紫店　</p>
+          <p><%= @open_time_tikushi %></p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="right">
+    <h1>掲示板</h1>
+    <div class="post">
+      <%= form_tag("/top/create") do %>
+        <p>ユーザー名（入力必須）</p>
+        <input name="username" id="name" type="text" placeholder="例) 九大太郎">
+        <p>つぶやく内容（入力必須）</p>
+        <textarea name="content" placeholder="例) 今日も学食、何にするか迷う…"></textarea>
+        <input class="small-btn btn-showa" type="submit">
+        <% if flash[:notice] %>
+          <div class="flash">
+            <%= flash[:notice] %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="posts-index-items">
       <% @posts.each do |post| %>
         <div class="posts-index-item">
-          <%= post.content %>
+          <p><%= post.content %></p>
+          <p class="post-detail">ユーザー名 <%= post.username %></p>
+          <p class="post-detail"><%= l post.created_at %></p>
         </div>
       <% end %>
-  </div>
+    </div>
   </div>
 
 </div>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'top' => "home#top"
+  post 'top/create' => 'home#create'
   get "post" => "home#post"
   get "bus" => "home#bus"
   get "library" => "home#library"
