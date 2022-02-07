@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'users#index'
+  root 'homes#top'
 
   get 'top' => "home#top"
   post 'top/create' => 'home#create'
