@@ -222,7 +222,7 @@ class HomeController < ApplicationController
     # ビッグスカイ
     if n >=1 && n <= 5
       @open_time_bigsky = "10:00～20:00"
-    elsif n = 6
+    elsif n == 6
       @open_time_bigsky = "11:00～14:00"     
     else
       @open_time_bigsky = "Close"
@@ -252,7 +252,7 @@ class HomeController < ApplicationController
     # ビッグダイニング
     if n >=1 && n <= 5
       @open_time_bigdining = "8:00～20:30"
-    elsif n = 6
+    elsif n == 6
       @open_time_bigdining = "11:00～14:00 17:00-19:30"     
     else
       @open_time_bigdining = "Close"
@@ -282,7 +282,7 @@ class HomeController < ApplicationController
     # ビッグどら
     if n >=1 && n <= 5
       @open_time_bigdora = "8:00～20:30"
-    elsif n = 6
+    elsif n == 6
       @open_time_bigdora = "11:00～14:00"     
     else
       @open_time_bigdora = "Close"
@@ -301,7 +301,7 @@ class HomeController < ApplicationController
     # イースト１号館
     if n >=1 && n <= 5
       @open_time_east1 = "8:00～20:00"
-    elsif n = 6
+    elsif n == 6
       @open_time_east1 = "11:00～17:00"
     else
       @open_time_east1 = "Close"
@@ -310,7 +310,7 @@ class HomeController < ApplicationController
     # 中央図書館
     if n >=1 && n <= 5
       @open_time_chuoh = "8:00～20:00"
-    elsif n = 6
+    elsif n == 6
       @open_time_chuoh = "10:00～20:00"
     else
       @open_time_chuoh = "Close"
@@ -319,7 +319,7 @@ class HomeController < ApplicationController
     # 伊都協奏館
     if n >=1 && n <= 6
       @open_time_ito = "17:00～20:00"
-    elsif n = 7
+    elsif n == 7
       @open_time_ito = "11:00～14:00"
     else
       @open_time_ito = "Close"
@@ -329,7 +329,7 @@ class HomeController < ApplicationController
     # 日常ゾーン
     if n >=1 && n <= 5
       @open_time_nichijo = "8:00～20:00"
-    elsif n = 6
+    elsif n == 6
       @open_time_nichijo = "8:00～19:00"
     else
       @open_time_nichijo = "10:00～17:00"
