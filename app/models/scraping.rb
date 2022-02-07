@@ -51,10 +51,9 @@ class Scraping < ApplicationRecord
     elements = page.search('td.lunch') #div.idxcol aは取得したい要素  elementsは任意の変数
     i = 1
     elements.each do |element|
-      menu = TeishokuMenu.find_by(id: i)                     #Fishは任意のクラス、fishは任意のインスタンス
+      menu = TeishokuMenu.new                     #Fishは任意のクラス、fishは任意のインスタンス
       menu.content = element.inner_text
       menu.save
-      i++
     end
     menu2 = TeishokuMenu.new
     menu2.content = "ㅤ"
