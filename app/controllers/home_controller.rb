@@ -337,7 +337,7 @@ class HomeController < ApplicationController
     # 勉学ゾーン
     if n >=1 && n <= 5
       @open_time_bengaku = "8:00～20:00"
-    elsif n = 6
+    elsif n == 6
       @open_time_bengaku = "11:00～14:00"
     else
       @open_time_bengaku = "close"
