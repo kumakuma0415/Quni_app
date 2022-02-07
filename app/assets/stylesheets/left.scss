@@ -1,13 +1,7 @@
-// top
-.main {
-    width: 570px;
-    height: auto;
-    min-height: 100%;
-    background-color: #f5f8fa;
-    margin-top: 10px;
-    margin-bottom: 20px;
+/* 疑似ヘッダー ================================ */
+.top-content {
+  display: flex;
 }
-// ↑をまたイジる
 
 .site-list {
   display: flex;
@@ -17,33 +11,10 @@
   margin-right: 10px;
   margin-bottom: 20px;
 }
+/* 疑似ヘッダー終了 ================================ */
 
-.part {
-  margin-bottom: 20px;
-}
 
-.btn {
-  font-size: 0.8rem;
-  font-weight: 700;
-  line-height: 1.5;
-  position: relative;
-  display: inline-block;
-  padding: 1rem 2rem;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-  letter-spacing: 0.1em;
-  color: #212529;
-  border-radius: 0.5rem;
-}
-
+/* ボタン ================================ */
 .small-btn {
   font-size: .1rem;
   font-weight: 600;
@@ -66,75 +37,25 @@
   border-radius: 0.5rem;
 }
 
-.btn-campusmate,
-.btn-moodle,
-.btn-seikyou,
-.btn-showa,
-.btn-nishitetu,
-.btn-chuou,
-.btn-rikei,
-.btn-cafe {
+.btn-campusmate,.btn-moodle,
+.btn-seikyou,.btn-showa,
+.btn-nishitetu,.btn-chuou,
+.btn-rikei,.btn-cafe {
   color: #fff;
   background-color: #e3373d;
 }
 
-.btn-campusmate:hover,
-.btn-moodle:hover,
-.btn-seikyou:hover,
-.btn-showa:hover,
-.btn-nishitetu:hover,
-.btn-chuou:hover,
-.btn-rikei:hover,
-.btn-cafe:hover { 
+.btn-campusmate:hover,.btn-moodle:hover,
+.btn-seikyou:hover,.btn-showa:hover,
+.btn-nishitetu:hover,.btn-chuou:hover,
+.btn-rikei:hover,.btn-cafe:hover { 
   color: #fff;
   background-color: #b10721;
 }
+/* ボタン終了 ================================ */
 
-p {
-  color: black;
-}
 
-// .top.html {
-//   display: flex;
-// }
-
-.left {
-  float: left;
-  width: 72%;
-}
-
-.right {
-  float: right;
-  width: 24%;
-  position: fixed;
-  right: 25px;
-  border-style: solid;
-  padding: 5px;
-}
-
-.post {
-  margin-bottom: 10px;
-}
-
-.posts-index-items {
-  overflow-y: scroll;
-  height: 300px;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.posts-index-item {
-  width: 100%;
-}
-
-.post-detail {
-  font-size: 0.5rem;
-}
-
-.top-content {
-  display: flex;
-}
-
+/* バス ================================ */
 .company-items {
   display: flex;
 }
@@ -151,6 +72,21 @@ ul {
   display: flex;
 }
 
+.bus-item {
+  margin-bottom: 15px;
+}
+
+.showa {
+  width: 40%;
+}
+
+.nishitetsu {
+  width: 60%;
+}
+/* バス終了 ================================ */
+
+
+/* バス、図書館、学食、売店 ================================ */
 .wrdbus,
 .showa,
 .nishitetsu,
@@ -167,10 +103,6 @@ ul {
 .cafe-item,
 .shop-item {
   margin: 5px;
-}
-
-.bus-item {
-  margin-bottom: 15px;
 }
 
 .cafe-item,
@@ -232,19 +164,7 @@ ul {
   margin: 5px 4px;
 }
 
-.showa {
-  width: 40%;
-}
-
-.nishitetsu {
-  width: 60%;
-}
-
 .caution {
   margin-left: 20px;
 }
-
-textarea {
-  width: 100%;
-  border: 0px;
-}
+/* バス、図書館、学食、売店終了 ================================ */

@@ -9,10 +9,12 @@ class HomeController < ApplicationController
 
     # 今日の年月日
     dt = Time.now
-    # 例)20220126
-    num_dt = dt.strftime("%Y%m%d")
-    num_dt2 = dt.strftime("%H%M")
+    num_dt = dt.strftime("%Y%m%d")   # 例)2022/01/26 → 20220126
+    num_dt2 = dt.strftime("%H%M")  # 例)14:47 → 1447
     
+
+    #昭和バス
+    #HPサイト取得
     @hp_showa_toStation = "https://transfer.navitime.biz/showa-bus/extif/TransferSearchIF?startName=九大ビッグオレンジ&goalName=九大学研都市駅&start=00087910&goal=00291944&date=" + num_dt + num_dt2 + "&device=pc&month_=2022%2F01%2F26&hour=14&minute=46&basis=1&sort=0"
     @hp_showa_toUniversity = "https://transfer.navitime.biz/showa-bus/extif/TransferSearchIF?startName=九大学研都市駅&goalName=九大ビッグオレンジ&start=00291944&goal=00087910&date=" + num_dt + num_dt2 + "&device=pc&month_=2022%2F01%2F27&hour=10&minute=42&basis=1&sort=0"
 
@@ -20,10 +22,10 @@ class HomeController < ApplicationController
     # 関数にしてきれいにする
     # scrape_showa_toStation = Scraping.scrape_showa_toStation
     # scrape_showa_toStation
-    
     # scrape_showa_toUniversity = Scraping.scrape_showa_toUniversity
     # scrape_showa_toUniversity
 
+    # 九大ビッグオレンジ～九大学研都市駅
     agent = Mechanize.new                  #agentは任意の変数
     page_showa_toStation = agent.get(@hp_showa_toStation)  #pageは任意の変数 getの引数はサイトのURL
     elements = page_showa_toStation.search('div.startGoalTime') #div.idxcol aは取得したい要素  elementsは任意の変数
@@ -32,7 +34,7 @@ class HomeController < ApplicationController
     @showa_toStation2 = elements[2].inner_text
     @showa_toStation3 = elements[3].inner_text
 
-    #
+    # 九大学研都市駅～九大ビッグオレンジ
     agent2 = Mechanize.new
     page_showa_toUniversity = agent2.get(@hp_showa_toUniversity)  #pageは任意の変数 getの引数はサイトのURL
     elements2 = page_showa_toUniversity.search('div.startGoalTime') #div.idxcol aは取得したい要素  elementsは任意の変数
@@ -44,7 +46,8 @@ class HomeController < ApplicationController
 
 
     # 西鉄バス
-    # 1/27の日付でも最新の情報が手にはいる？？
+    # HPサイト取得
+    # 1/27の日付でも最新の情報が手に入るみたい
     @hp_nishitetsu_toTenjin = "https://jik.nishitetsu.jp/route?f_zahyo_flg=0&f_list=0001%2C563169&t_zahyo_flg=0&t_list=0000%2CD00105&rightnow_flg=2&sdate=2022%2F01%2F27&stime_h=10&stime_m=45&stime_flg=1&jkn_busnavi=1&syosaiFlg=0"
     @hp_nishitetsu_toHakata = "https://jik.nishitetsu.jp/route?f_zahyo_flg=0&f_list=0001%2C563169&t_zahyo_flg=0&t_list=0000%2CL00002&rightnow_flg=2&sdate=2022%2F01%2F31&stime_h=19&stime_m=25&stime_flg=1&jkn_busnavi=1&syosaiFlg=0"
     
@@ -53,6 +56,9 @@ class HomeController < ApplicationController
 
 
     # 関数にしてきれいにする
+
+
+    # 九大ビッグオレンジ～天神ソラリア～博多駅
     agent3 = Mechanize.new                  #agentは任意の変数
     page_nishitetsu_toTenjin = agent3.get(@hp_nishitetsu_toTenjin)  #pageは任意の変数 getの引数はサイトのURL
     page_nishitetsu_toHakata = agent3.get(@hp_nishitetsu_toHakata)  #pageは任意の変数 getの引数はサイトのURL
@@ -95,7 +101,7 @@ class HomeController < ApplicationController
 
     
 
-    #修正を加える リファクタリング　エラー 最終が終わった時エラーが起きる　if文を使うこと
+    # 博多駅～天神ソラリア～九大ビッグオレンジ
     agent4 = Mechanize.new                  #agentは任意の変数
     page_nishitetsu_toUniversity = agent4.get(@hp_nishitetsu_toUniversity)  #pageは任意の変数 getの引数はサイトのURL
     page_nishitetsu_fromHakata_toUniversity = agent4.get(@hp_nishitetsu_fromHakata_toUniversity)  #pageは任意の変数 getの引数はサイトのURL
@@ -150,11 +156,13 @@ class HomeController < ApplicationController
     @posts = Post.all.order(created_at: :desc)
 
 
+    # 図書館
+    # HPサイト取得
     @hp_chuou = "https://www.lib.kyushu-u.ac.jp/ja/libraries/central"
     @hp_rikei = "https://www.lib.kyushu-u.ac.jp/ja/libraries/scitech"
     @hp_igaku = "https://www.lib.kyushu-u.ac.jp/ja/libraries/medical"
     @hp_geijutsu = "https://www.lib.kyushu-u.ac.jp/ja/libraries/design"
-    hp_chikushi = "https://www.lib.kyushu-u.ac.jp/ja/libraries/chikushi"
+    @hp_chikushi = "https://www.lib.kyushu-u.ac.jp/ja/libraries/chikushi"
 
     agent = Mechanize.new                  #agentは任意の変数
 
@@ -179,7 +187,8 @@ class HomeController < ApplicationController
     @time_chikushi = elements5.inner_text
 
 
-    # 学食の表示
+    # 学食
+
     # nの値は、曜日に通し番号をつけたもの 例)monday:1 Saturday:6
     n = Date.today.wday
 
@@ -189,17 +198,16 @@ class HomeController < ApplicationController
 
     # データベースを更新するか否か
     teishoku = TeishokuMenu.find_by(id: 3*n -1 + 18*y)
-    k = teishoku.updated_at
+    k = teishoku.created_at
     if Date.today - k.to_date >= 7
     # if Date.today - k.to_date >= 10
-      # １週間ズレている
       scrape_lunch = Scraping.scrape_lunch
       scrape_lunch
       scrape_dinner = Scraping.scrape_dinner
       scrape_dinner
     end
 
-    # 今日の学食
+    # 今日の定食の表示
     menu_lunch = TeishokuMenu.find_by(id: 3*n-1 + 18 * y )
     menu_dinner = TeishokuMenu2.find_by(id: 3*n-1 + 15 * y + 3)
     @today_menu_lunch = menu_lunch.content
@@ -208,6 +216,9 @@ class HomeController < ApplicationController
    
     # shukujitsu = HolidayJapan.check(Date.today)
     
+
+    # 各学食の営業時間を表示
+
     # ビッグスカイ
     if n >=1 && n <= 5
       @open_time_bigsky = "10:00～20:00"
@@ -284,6 +295,8 @@ class HomeController < ApplicationController
       @open_time_ikei = "Close"
     end
 
+
+    # 各売店の営業時間を表示
 
     # イースト１号館
     if n >=1 && n <= 5
@@ -370,7 +383,6 @@ class HomeController < ApplicationController
       @open_time_bigdora2 = "Close"
     end
 
-
     # 医学部購買書籍
     if n >=1 && n <= 5
       @open_time_igakushop = "8:00～19:00"
@@ -400,6 +412,7 @@ class HomeController < ApplicationController
 
   end
 
+  # 投稿をしたときの処理
   def create
     if params[:username] != "" || params[:content] != ""
       @post = Post.new(content: params[:content], username: params[:username])
@@ -408,50 +421,6 @@ class HomeController < ApplicationController
     else
       redirect_to("/top")
     end
-  end
-
-  def post
-    # 投稿機能
-    @posts = Post.all
-  end
-
-  def bus
-  end
-
-  def library
-  end
-
-  def cafe
-    # 今週の学食の表示
-    @menus_lunch = TeishokuMenu.all
-    @menus_dinner = TeishokuMenu2.all
-
-    # 学食の表示
-    # nの値は、曜日に通し番号をつけたもの 例)monday:1 Saturday:6
-    n = Date.today.wday
-
-    base_day = Date.new(2022, 2, 6)
-    x = (Date.today.next_week(:sunday) - base_day).to_i
-    y = x / 7
-
-    # データベースを更新するか否か
-    teishoku2 = TeishokuMenu.find_by(id: 3*n -1 + 18*y)
-    k2 = teishoku2.updated_at
-    if Date.today - k2.to_date >= 7
-      scrape_lunch = Scraping.scrape_lunch
-      scrape_lunch
-      scrape_dinner = Scraping.scrape_dinner
-      scrape_dinner
-    end
-
-    # 今日の学食
-    menu_lunch = TeishokuMenu.find_by(id: 3*n-1 + 18 * y)
-    menu_dinner = TeishokuMenu2.find_by(id: 3*n-1 + 15 * y )
-    @today_menu_lunch = menu_lunch.content
-    @today_menu_dinner = menu_dinner.content
-  end
-
-  def shop
   end
 
 end
