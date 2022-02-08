@@ -10,7 +10,7 @@ class HomeController < ApplicationController
     # 今日の年月日
     dt = Time.now
     num_dt = dt.strftime("%Y%m%d")   # 例)2022/01/26 → 20220126
-    num_dt2 = dt.strftime("%H%M")  # 例)14:47 → 1447
+    num_dt2 = dt.strftime("%H%M") + 900  # 例)14:47 → 1447
     num_dt3 = dt.strftime("%H")  # 例)14:47 → 1447
     num_dt4 = dt.strftime("%M")  # 例)14:47 → 1447
     
