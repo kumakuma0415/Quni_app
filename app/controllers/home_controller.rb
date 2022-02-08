@@ -72,17 +72,21 @@ class HomeController < ApplicationController
     if elements3[0]
       @nishitetsu_toTenjin0 = elements3[0].inner_text
       @nishitetsu_toTenjin1 = elements3[1].inner_text
+      @nishitetsu_toTenjin0_1 = @nishitetsu_toTenjin0 + "発 ➡ " + @nishitetsu_toTenjin1 + "着"
       @nishitetsu_toHakata1 = elements3_3[1].inner_text
-      t1 = elements3[1].inner_text
-      t2 = elements3[0].inner_text
-      t3 = elements3_3[1].inner_text
-      second1 = Time.parse(t1) - Time.parse(t2)
-      second2 = Time.parse(t3) - Time.parse(t2)
-      @t = (second1 /60).floor
-      @t2 = (second2 /60).floor
+      
+      # 乗車時間の掲示
+      # t1 = elements3[1].inner_text
+      # t2 = elements3[0].inner_text
+      # t3 = elements3_3[1].inner_text
+      # second1 = Time.parse(t1) - Time.parse(t2)
+      # second2 = Time.parse(t3) - Time.parse(t2)
+      # @t = (second1 /60).floor
+      # @t2 = (second2 /60).floor
     else
-      @nishitetsu_toTenjin0 = ""
-      @nishitetsu_toTenjin1 = ""
+      # @nishitetsu_toTenjin0 = ""
+      # @nishitetsu_toTenjin1 = ""
+      @nishitetsu_toTenjin0_1 = "今日は終了しました"
     end
 
     if elements3[2]

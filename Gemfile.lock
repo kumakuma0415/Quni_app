@@ -138,6 +138,7 @@ GEM
       hashery (~> 2.0)
       ruby-rc4
       ttfunk
+    pg (0.18.2-x64-mingw32)
     public_suffix (4.0.6)
     puma (3.12.6)
     racc (1.6.0)
@@ -249,6 +250,7 @@ DEPENDENCIES
   nokogiri
   open-uri
   pdf-reader
+  pg
   puma (~> 3.11)
   rails (~> 5.2.6)
   sass-rails (~> 5.0)
