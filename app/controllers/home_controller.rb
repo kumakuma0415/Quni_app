@@ -222,8 +222,8 @@ class HomeController < ApplicationController
     # @today_menu_lunch = menu_lunch[4].inner_text
     # @today_menu_dinner = menu_dinner[n].inner_text
     
-    @today_menu_lunch = menu_lunch[n].inner_text
-    @today_menu_dinner = menu_dinner[n].inner_text
+    @today_menu_lunch = menu_lunch[3n-1].inner_text
+    @today_menu_dinner = menu_dinner[3n-1].inner_text
 
    
     # shukujitsu = HolidayJapan.check(Date.today)
