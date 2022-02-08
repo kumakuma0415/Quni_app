@@ -197,21 +197,28 @@ class HomeController < ApplicationController
     y = x / 7
 
     # データベースを更新するか否か
-    teishoku = TeishokuMenu.find_by(id: 3*n -1 + 18*y)
-    k = teishoku.created_at
-    if Date.today - k.to_date >= 7
-    # if Date.today - k.to_date >= 10
-      scrape_lunch = Scraping.scrape_lunch
-      scrape_lunch
-      scrape_dinner = Scraping.scrape_dinner
-      scrape_dinner
-    end
+    # teishoku = TeishokuMenu.find_by(id: 3*n -1 + 18*y)
+    # k = teishoku.created_at
+    # if Date.today - k.to_date >= 7
+    # # if Date.today - k.to_date >= 10
+    #   scrape_lunch = Scraping.scrape_lunch
+    #   scrape_lunch
+    #   scrape_dinner = Scraping.scrape_dinner
+    #   scrape_dinner
+    # end
 
     # 今日の定食の表示
-    menu_lunch = TeishokuMenu.find_by(id: 3*n-1 + 18 * y )
-    menu_dinner = TeishokuMenu2.find_by(id: 3*n-1 + 15 * y + 3)
-    @today_menu_lunch = menu_lunch.content
-    @today_menu_dinner = menu_dinner.content
+    # menu_lunch = TeishokuMenu.find_by(id: 3*n-1 + 18 * y )
+    # menu_dinner = TeishokuMenu2.find_by(id: 3*n-1 + 15 * y + 3)
+
+
+    agent = Mechanize.new                  #agentは任意の変数
+    page = agent.get("http://www.coop.kyushu-u.ac.jp/teishoku220207.html")  #pageは任意の変数 getの引数はサイトのURL
+    menu_lunch = page.search('td.lunch') #div.idxcol aは取得したい要素  elementsは任意の変数
+    menu_dinner = page.search('td.dinner') #div.idxcol aは取得したい要素  elementsは任意の変数
+
+    @today_menu_lunch = menu_lunch[1].inner_text
+    @today_menu_dinner = menu_dinner[1].inner_text
     
    
     # shukujitsu = HolidayJapan.check(Date.today)
