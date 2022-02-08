@@ -9,15 +9,16 @@ class HomeController < ApplicationController
 
     # 今日の年月日
     dt = Time.now
+    dt2 = dt + 60*60*9
     num_dt = dt.strftime("%Y%m%d")   # 例)2022/01/26 → 20220126
-    num_dt2 = dt.strftime("%H%M") + 900  # 例)14:47 → 1447
+    num_dt2 = dt2.strftime("%H%M")  # 例)14:47 → 1447
     num_dt3 = dt.strftime("%H")  # 例)14:47 → 1447
     num_dt4 = dt.strftime("%M")  # 例)14:47 → 1447
     
 
     #昭和バス
     #HPサイト取得
-    @hp_showa_toStation = "https://transfer.navitime.biz/showa-bus/extif/TransferSearchIF?startName=九大ビッグオレンジ&goalName=九大学研都市駅&start=00087910&goal=00291944&date=" + num_dt + num_dt2 + "&device=pc&month_=2022%2F01%2F26&hour=" + num_dt3 + "&minute=" + num_dt4 + "&basis=1&sort=0"
+    @hp_showa_toStation = "https://transfer.navitime.biz/showa-bus/extif/TransferSearchIF?startName=九大ビッグオレンジ&goalName=九大学研都市駅&start=00087910&goal=00291944&date=" + num_dt + num_dt2 + "&device=pc&month_=2022%2F01%2F26&hour=9&minute=23&basis=1&sort=0"
     @hp_showa_toUniversity = "https://transfer.navitime.biz/showa-bus/extif/TransferSearchIF?startName=九大学研都市駅&goalName=九大ビッグオレンジ&start=00291944&goal=00087910&date=" + num_dt + num_dt2 + "&device=pc&month_=2022%2F01%2F27&hour=10&minute=42&basis=1&sort=0"
 
 
