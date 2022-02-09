@@ -108,7 +108,7 @@ ul {
 .cafe-item,
 .shop-item {
   margin-left: 20px;
-  display: flex;
+  // display: flex;
 }
 
 .cafe-item2 {
@@ -128,12 +128,12 @@ ul {
   justify-content: space-between;
 }
 
-.cafe-items,
-.shop-items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
+// .cafe-items,
+// .shop-items {
+//   // display: flex;
+//   // flex-wrap: wrap;
+//   // justify-content: space-around;
+// }
 
 .cafe-list {
   display: flex;
