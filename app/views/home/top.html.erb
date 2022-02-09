@@ -134,9 +134,10 @@
       
     </div>
 
+    <div class="cafe-shop">
     <div class=" part cafe">
+      <h1>学食</h1>
       <ul>
-        <h1>学食</h1>
         <li class="cafe-btn-list"><a href="http://www.coop.kyushu-u.ac.jp/data/ontime202010.pdf" class="small-btn btn-cafe">詳しい営業時間のご案内</a></li>
         <li class="cafe-btn-list"><a href="http://www.coop.kyushu-u.ac.jp/cgi-bin/teishokuurl.cgi?location=on" class="small-btn btn-cafe">今週の定食メニューを見る</a></li>
         <li class="cafe-btn-list"><a href="http://www.coop.kyushu-u.ac.jp/shokudou/month_menu.html" class="small-btn btn-cafe">今日の出食予定表を見る</a></li>
@@ -157,66 +158,73 @@
       </div>
 
       
-      <p class="cafe-main-theme">伊都　イーストゾーン
-        <a href="/cafe" class="small-btn btn-cafe">→ 詳しく見る</a>
-      </p>
+      <div class="cafe-big-items">
+      <div class="cafe-big-item">
+        <p class="cafe-main-theme">イーストゾーン
+          <a href="/cafe" class="small-btn btn-cafe">→ 詳しく見る</a>
+        </p>
 
-      <div class="cafe-items">
-        <div class="cafe-item">
-          <p class="cafe-theme">ビッグスカイ　</p>
-          <p><%= @open_time_bigsky %></p>
-        </div>
+        <div class="cafe-items">
+          <div class="cafe-item">
+            <p class="cafe-theme">ビッグスカイ　</p>
+            <p><%= @open_time_bigsky %></p>
+          </div>
 
-        <div class="cafe-item">
-          <p class="cafe-theme">L-Café　</p>
-          <p><%= @open_time_lcafe %></p>
+          <div class="cafe-item">
+            <p class="cafe-theme">L-Café　</p>
+            <p><%= @open_time_lcafe %></p>
+          </div>
         </div>
       </div>
       
-      <p class="cafe-main-theme">伊都　センターゾーン
-        <a href="/cafe" class="small-btn btn-cafe">→ 詳しく見る</a>
-      </p>
+      <div class="cafe-big-item">
+        <p class="cafe-main-theme">センターゾーン
+          <a href="/cafe" class="small-btn btn-cafe">→ 詳しく見る</a>
+        </p>
 
-      <div class="cafe-items">
-        <div class="cafe-item">
-          <p class="cafe-theme">Big Orange Restaurant　</p>
-          <p><%= @open_time_bigorange %></p>
-        </div>
-        
-        <div class="cafe-item">
-          <p class="cafe-theme">QASIS　</p>
-          <p><%= @open_time_Qasis %></p>
-        </div>
+        <div class="cafe-items">
+          <div class="cafe-item">
+            <p class="cafe-theme">Big Orange Restaurant　</p>
+            <p><%= @open_time_bigorange %></p>
+          </div>
+          
+          <div class="cafe-item">
+            <p class="cafe-theme">QASIS　</p>
+            <p><%= @open_time_Qasis %></p>
+          </div>
 
-        <div class="cafe-item">
-          <p class="cafe-theme">Main Dining（１階食堂） </p>
-          <p><%= @open_time_bigdining %></p>
-        </div>
+          <div class="cafe-item">
+            <p class="cafe-theme">Main Dining（１階食堂） </p>
+            <p><%= @open_time_bigdining %></p>
+          </div>
 
-        <div class="cafe-item">
-          <p class="cafe-theme">Big Dining（地階食堂） </p>
-          <p><%= @open_time_underground %></p>
+          <div class="cafe-item">
+            <p class="cafe-theme">Big Dining（地階食堂） </p>
+            <p><%= @open_time_underground %></p>
+          </div>
         </div>
       </div>
 
-      <p class="cafe-main-theme">伊都　ウエストゾーン
-        <a href="/cafe" class="small-btn btn-cafe">→ 詳しく見る</a>
-      </p>
+      <div class="cafe-big-item">
+        <p class="cafe-main-theme">ウエストゾーン
+          <a href="/cafe" class="small-btn btn-cafe">→ 詳しく見る</a>
+        </p>
 
-      <div class="cafe-items">
-        <div class="cafe-item">
-          <p class="cafe-theme">Libca　</p>
-          <p><%= @open_time_libca %></p>
-        </div>
+        <div class="cafe-items">
+          <div class="cafe-item">
+            <p class="cafe-theme">Libca　</p>
+            <p><%= @open_time_libca %></p>
+          </div>
 
-        <div class="cafe-item">
-          <p class="cafe-theme">アグリダイニング　</p>
-          <p><%= @open_time_agri %></p>
-        </div>
-        
-        <div class="cafe-item">
-          <p class="cafe-theme">ビッグどら食堂　</p>
-          <p><%= @open_time_bigdora %></p>
+          <div class="cafe-item">
+            <p class="cafe-theme">アグリダイニング　</p>
+            <p><%= @open_time_agri %></p>
+          </div>
+          
+          <div class="cafe-item">
+            <p class="cafe-theme">ビッグどら食堂　</p>
+            <p><%= @open_time_bigdora %></p>
+          </div>
         </div>
       </div>
 
@@ -229,6 +237,7 @@
           <p><%= @open_time_ikei %></p>
         </div>
       </div>
+      </div>
     </div>
 
     <div class="part shop">
@@ -239,7 +248,7 @@
       
       
 
-      <p class="shop-main-theme-east">伊都　イーストゾーン
+      <p class="shop-main-theme-east">イーストゾーン
         <a href="http://www.coop.kyushu-u.ac.jp/koubaibu.html" class="small-btn btn-cafe">→ 詳しく見る</a>
       </p>
 
@@ -260,16 +269,18 @@
         </div>
       </div>
 
-      <p class="shop-main-theme">伊都　センターゾーン
+      <p class="shop-main-theme">センターゾーン
         <a href="http://www.coop.kyushu-u.ac.jp/koubaibu.html" class="small-btn btn-cafe">→ 詳しく見る</a>
       </p>
 
       <div class="shop-items">
-        <div class="shop-item2">
+        <div class="shop-item">
           <p class="shop-theme">伊都皎皎舎店　</p>
-          <p>日常ゾーン　<%= @open_time_nichijo %>　勉学ゾーン　<%= @open_time_bengaku %></p>
-          <p>注文カウンター　<%= @open_time_chumon %>　旅行カウンター　<%= @open_time_ryokou %></p>
         </div>
+        <p>　　・日常ゾーン　<%= @open_time_nichijo %></p>
+        <p>　　・勉学ゾーン　<%= @open_time_bengaku %></p>
+        <p>　　・注文カウンター　<%= @open_time_chumon %></p>
+        <p>　　・旅行カウンター　<%= @open_time_ryokou %></p>
 
         <div class="shop-item">
           <p class="shop-theme">Ｑ-Ｓｈｏｐ　</p>
@@ -277,7 +288,7 @@
         </div>
       </div>
 
-      <p class="shop-main-theme">伊都　ウエストゾーン
+      <p class="shop-main-theme">ウエストゾーン
         <a href="http://www.coop.kyushu-u.ac.jp/koubaibu.html" class="small-btn btn-cafe">→ 詳しく見る</a>
       </p>
 
@@ -317,6 +328,7 @@
           <p><%= @open_time_tikushi %></p>
         </div>
       </div>
+    </div>
     </div>
   </div>
 
