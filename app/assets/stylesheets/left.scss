@@ -52,6 +52,7 @@
   color: #fff;
   background-color: #b10721;
 }
+
 /* ボタン終了 ================================ */
 
 
@@ -148,8 +149,9 @@ ul {
 //   // justify-content: space-around;
 // }
 
-.cafe-list {
+.cafe-btn-lists {
   display: flex;
+  flex: wrap;
 }
 
 .cafe-lunch,

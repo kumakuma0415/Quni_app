@@ -62,17 +62,17 @@
         <div class="bus-item">
           <p class="bus-theme">九大ビッグオレンジ～博多駅センタービル前Ｅ</p>
           <div class="btn-time">
-            <a class="btn-nishitetu small-btn" href=<%= @hp_nishitetsu_toTenjin %>>
+            <a class="btn-nishitetu small-btn" href=<%= @hp_nishitetsu_toHakata %>>
               詳しく見る→
             </a>
-            <p class="time-margin"><%= @nishitetsu_toTenjin2 %>発 ➡ <%= @nishitetsu_toHakata1 %>着　<%= @nishitetsu_toTenjin2 %>発 ➡ <%= @nishitetsu_toHakata3 %>着 </p>
+            <p class="time-margin"><%= @nishitetsu_toTenjin0 %>発 ➡ <%= @nishitetsu_toHakata1 %>着　<%= @nishitetsu_toTenjin2 %>発 ➡ <%= @nishitetsu_toHakata3 %>着 </p>
           </div>
         </div>
 
         <div class="bus-item">
           <p class="bus-theme">博多駅センタービル前Ｅ～九大ビッグオレンジ</p>
           <div class="btn-time">
-            <a class="btn-nishitetu small-btn" href=<%= @hp_nishitetsu_toUniversity %>>
+            <a class="btn-nishitetu small-btn" href=<%= @hp_nishitetsu_fromHakata_toUniversity %>>
               詳しく見る→
             </a>
             <p class="time-margin"><%= @nishitetsu_fromHakata_toUniversity0 %>発 ➡ <%= @nishitetsu_fromHakata_toUniversity1 %>着　<%= @nishitetsu_fromHakata_toUniversity3 %>発 ➡ <%= @nishitetsu_fromHakata_toUniversity4 %>着</p>
@@ -137,12 +137,12 @@
     <div class="cafe-shop">
     <div class=" part cafe">
       <h1>学食</h1>
-      <ul>
-        <li class="cafe-btn-list"><a href="http://www.coop.kyushu-u.ac.jp/data/ontime202010.pdf" class="small-btn btn-cafe">詳しい営業時間のご案内</a></li>
-        <li class="cafe-btn-list"><a href="http://www.coop.kyushu-u.ac.jp/cgi-bin/teishokuurl.cgi?location=on" class="small-btn btn-cafe">今週の定食メニューを見る</a></li>
-        <li class="cafe-btn-list"><a href="http://www.coop.kyushu-u.ac.jp/shokudou/month_menu.html" class="small-btn btn-cafe">今日の出食予定表を見る</a></li>
-        <li class="cafe-btn-list"><a href="http://www.coop.kyushu-u.ac.jp/shokudoubu.html" class="small-btn btn-cafe">食堂HP</a></li>
-      </ul>
+      <%# <div class="cafe-btn-lists"> %>
+        <a href="http://www.coop.kyushu-u.ac.jp/data/ontime202010.pdf" class="small-btn btn-cafe">詳しい営業時間のご案内</a>
+        <a href="http://www.coop.kyushu-u.ac.jp/cgi-bin/teishokuurl.cgi?location=on" class="small-btn btn-cafe">今週の定食メニューを見る</a>
+        <a href="http://www.coop.kyushu-u.ac.jp/shokudou/month_menu.html" class="small-btn btn-cafe">今日の出食予定表を見る</a>
+        <a href="http://www.coop.kyushu-u.ac.jp/shokudoubu.html" class="small-btn btn-cafe">食堂HP</a>
+      <%# </div> %>
 
       <p class="caution">※祝日・長期休業、また新型感染症による営業変更には対応しておりません。</p>
 
@@ -241,12 +241,8 @@
     </div>
 
     <div class="part shop">
-      <ul>
-        <li><h1>売店</h1></li>
-        <li><p class="caution">※祝日・長期休業、また新型感染症による営業変更には対応しておりません。</p></li>
-      </ul>
-      
-      
+      <h1>売店</h1>
+      <p class="caution">※祝日・長期休業、また新型感染症による営業変更には対応しておりません。</p>
 
       <p class="shop-main-theme-east">イーストゾーン
         <a href="http://www.coop.kyushu-u.ac.jp/koubaibu.html" class="small-btn btn-cafe">→ 詳しく見る</a>
