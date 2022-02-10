@@ -56,7 +56,7 @@
             <a class="btn-nishitetu small-btn" href=<%= @hp_nishitetsu_toTenjin %>>
               詳しく見る→
             </a>
-            <p class="time-margin"><%= @nishitetsu_toTenjin0_1 %>　<%= @nishitetsu_toTenjin2 %>発 ➡ <%= @nishitetsu_toTenjin3 %>着</p>
+            <p class="time-margin"><%= @nishitetsu_toTenjin0_1 %>　<%= @nishitetsu_toTenjin2_3 %></p>
           </div>
         </div>
         <div class="bus-item">
@@ -65,7 +65,7 @@
             <a class="btn-nishitetu small-btn" href=<%= @hp_nishitetsu_toHakata %>>
               詳しく見る→
             </a>
-            <p class="time-margin"><%= @nishitetsu_toTenjin0 %>発 ➡ <%= @nishitetsu_toHakata1 %>着　<%= @nishitetsu_toTenjin2 %>発 ➡ <%= @nishitetsu_toHakata3 %>着 </p>
+            <p class="time-margin"><%= @nishitetsu_toHakata0_1 %>　<%= @nishitetsu_toHakata2_3 %></p>
           </div>
         </div>
 
@@ -75,7 +75,7 @@
             <a class="btn-nishitetu small-btn" href=<%= @hp_nishitetsu_fromHakata_toUniversity %>>
               詳しく見る→
             </a>
-            <p class="time-margin"><%= @nishitetsu_fromHakata_toUniversity0 %>発 ➡ <%= @nishitetsu_fromHakata_toUniversity1 %>着　<%= @nishitetsu_fromHakata_toUniversity3 %>発 ➡ <%= @nishitetsu_fromHakata_toUniversity4 %>着</p>
+            <p class="time-margin"><%= @nishitetsu_fromHakata_toUniversity0_1 %>　<%= @nishitetsu_fromHakata_toUniversity2_3 %></p>
           </div>
         </div>
 
@@ -85,7 +85,7 @@
             <a class="btn-nishitetu small-btn" href=<%= @hp_nishitetsu_toUniversity %>>
               詳しく見る→
             </a>
-            <p class="time-margin"><%= @nishitetsu_toUniversity0 %>発 ➡ <%= @nishitetsu_toUniversity1 %>着　<%= @nishitetsu_toUniversity2 %>発 ➡ <%= @nishitetsu_toUniversity3 %>着</p> 
+            <p class="time-margin"><%= @nishitetsu_toUniversity0_1 %>　<%= @nishitetsu_toUniversity2_3 %></p> 
           </div>
         </div>
       </div>
@@ -136,13 +136,15 @@
 
     <div class="cafe-shop">
     <div class=" part cafe">
-      <h1>学食</h1>
-      <%# <div class="cafe-btn-lists"> %>
-        <a href="http://www.coop.kyushu-u.ac.jp/data/ontime202010.pdf" class="small-btn btn-cafe">詳しい営業時間のご案内</a>
-        <a href="http://www.coop.kyushu-u.ac.jp/cgi-bin/teishokuurl.cgi?location=on" class="small-btn btn-cafe">今週の定食メニューを見る</a>
-        <a href="http://www.coop.kyushu-u.ac.jp/shokudou/month_menu.html" class="small-btn btn-cafe">今日の出食予定表を見る</a>
-        <a href="http://www.coop.kyushu-u.ac.jp/shokudoubu.html" class="small-btn btn-cafe">食堂HP</a>
-      <%# </div> %>
+      <div class="cafe-btn-lists">
+        <h1 >学食</h1>
+        <div>
+          <a href="http://www.coop.kyushu-u.ac.jp/data/ontime202010.pdf" class="small-btn btn-cafe">詳しい営業時間</a>
+          <a href="http://www.coop.kyushu-u.ac.jp/cgi-bin/teishokuurl.cgi?location=on" class="small-btn btn-cafe">今週の定食メニュー</a>
+          <a href="http://www.coop.kyushu-u.ac.jp/shokudou/month_menu.html" class="small-btn btn-cafe">今日の出食予定表</a>
+          <%# <a href="http://www.coop.kyushu-u.ac.jp/shokudoubu.html" class="small-btn btn-cafe">食堂HP</a> %>
+        </div>
+      </div>
 
       <p class="caution">※祝日・長期休業、また新型感染症による営業変更には対応しておりません。</p>
 
@@ -228,11 +230,11 @@
         </div>
       </div>
 
-      <div class="cafe-item2">
+      <div class="cafe-big-item">
         <p class="cafe-main-theme">その他
           <a href="/cafe" class="small-btn btn-cafe">→ 詳しく見る</a>
         </p>
-        <div class="cafe-item ikei-idou">
+        <div class="cafe-item">
           <p class="cafe-theme">医系食堂　</p>
           <p><%= @open_time_ikei %></p>
         </div>

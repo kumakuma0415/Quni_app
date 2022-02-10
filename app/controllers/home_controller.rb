@@ -67,14 +67,16 @@ class HomeController < ApplicationController
     page_nishitetsu_toHakata = agent3.get(@hp_nishitetsu_toHakata)  #pageは任意の変数 getの引数はサイトのURL
     elements3 = page_nishitetsu_toTenjin.search('.item .time span') #div.idxcol aは取得したい要素  elementsは任意の変数
     elements3_3 = page_nishitetsu_toHakata.search('.item .time span') #div.idxcol aは取得したい要素  elementsは任意の変数
-    elements3_2 = page_nishitetsu_toTenjin.search('.price span') #div.idxcol aは取得したい要素  elementsは任意の変数
+    # elements3_2 = page_nishitetsu_toTenjin.search('.price span') #div.idxcol aは取得したい要素  elementsは任意の変数
 
     if elements3[0]
       @nishitetsu_toTenjin0 = elements3[0].inner_text
       @nishitetsu_toTenjin1 = elements3[1].inner_text
       @nishitetsu_toTenjin0_1 = @nishitetsu_toTenjin0 + "発 ➡ " + @nishitetsu_toTenjin1 + "着"
       @nishitetsu_toHakata1 = elements3_3[1].inner_text
+      @nishitetsu_toHakata0_1 = @nishitetsu_toTenjin0 + "発 ➡ " + @nishitetsu_toHakata1 + "着"
       
+
       # 乗車時間の掲示
       # t1 = elements3[1].inner_text
       # t2 = elements3[0].inner_text
@@ -84,26 +86,27 @@ class HomeController < ApplicationController
       # @t = (second1 /60).floor
       # @t2 = (second2 /60).floor
     else
-      # @nishitetsu_toTenjin0 = ""
-      # @nishitetsu_toTenjin1 = ""
       @nishitetsu_toTenjin0_1 = "今日は終了しました"
+      @nishitetsu_toHakata0_1 = "今日は終了しました"
     end
 
     if elements3[2]
       @nishitetsu_toTenjin2 = elements3[2].inner_text
       @nishitetsu_toTenjin3 = elements3[3].inner_text
+      @nishitetsu_toTenjin2_3 = @nishitetsu_toTenjin2 + "発 ➡ " + @nishitetsu_toTenjin3 + "着"
       @nishitetsu_toHakata3 = elements3_3[3].inner_text
-      t4 = elements3[3].inner_text
-      t5 = elements3[2].inner_text
-      t6 = elements3_3[3].inner_text
-      second3 = Time.parse(t4) - Time.parse(t5)
-      second4 = Time.parse(t6) - Time.parse(t5)
-      @t3 = (second3 /60).floor
-      @t4 = (second4 /60).floor
-      @nishitetsu_price = elements3_2[0].inner_text
+      @nishitetsu_toHakata2_3 = @nishitetsu_toTenjin2 + "発 ➡ " + @nishitetsu_toHakata3 + "着"
+      # t4 = elements3[3].inner_text
+      # t5 = elements3[2].inner_text
+      # t6 = elements3_3[3].inner_text
+      # second3 = Time.parse(t4) - Time.parse(t5)
+      # second4 = Time.parse(t6) - Time.parse(t5)
+      # @t3 = (second3 /60).floor
+      # @t4 = (second4 /60).floor
+      # @nishitetsu_price = elements3_2[0].inner_text
    else
-    @nishitetsu_toTenjin2 = ""
-    @nishitetsu_toTenjin3 = ""
+    @nishitetsu_toTenjin2_3 = ""
+    @nishitetsu_toHakata2_3 = ""
    end
 
     
@@ -119,41 +122,48 @@ class HomeController < ApplicationController
     if elements4[0] && elements4_3[0]
       @nishitetsu_toUniversity0 = elements4[0].inner_text
       @nishitetsu_toUniversity1 = elements4[1].inner_text
+      @nishitetsu_toUniversity0_1 = @nishitetsu_toUniversity0 + "発 ➡ " + @nishitetsu_toUniversity1 + "着"
+      
       @nishitetsu_fromHakata_toUniversity0 = elements4_3[0].inner_text
       @nishitetsu_fromHakata_toUniversity1 = elements4_3[1].inner_text
-      t7 = elements4[1].inner_text
-      t8 = elements4[0].inner_text
-      t9 = elements4_3[0].inner_text
-      t10 = elements4_3[1].inner_text
-      second3 = Time.parse(t7) - Time.parse(t8)
-      second4 = Time.parse(t10) - Time.parse(t9)
-      @t5 = (second3 /60).floor
-      @t6 = (second4 /60).floor
-      # 不安要素
-      @nishitetsu_price2 = elements4_2[0].inner_text
+      @nishitetsu_fromHakata_toUniversity0_1 = @nishitetsu_fromHakata_toUniversity0 + "発 ➡ " + @nishitetsu_fromHakata_toUniversity1 + "着"
+      
+      # t7 = elements4[1].inner_text
+      # t8 = elements4[0].inner_text
+      # t9 = elements4_3[0].inner_text
+      # t10 = elements4_3[1].inner_text
+      # second3 = Time.parse(t7) - Time.parse(t8)
+      # second4 = Time.parse(t10) - Time.parse(t9)
+      # @t5 = (second3 /60).floor
+      # @t6 = (second4 /60).floor
+      # # 不安要素
+      # @nishitetsu_price2 = elements4_2[0].inner_text
     else
-      @nishitetsu_saishu = "本日の営業は終了しました"
-      @nishitetsu_toUniversitsy2 = ""
-      @nishitetsu_toUniversity3 = ""
+      @nishitetsu_toUniversity0_1 = "今日はは終了しました"
+      @nishitetsu_fromHakata_toUniversity0_1 = "今日はは終了しました"
     end
 
     
     if elements4[2] && elements4_3[2]
       @nishitetsu_toUniversity2 = elements4[2].inner_text
       @nishitetsu_toUniversity3 = elements4[3].inner_text
-      @nishitetsu_fromHakata_toUniversity3 = elements4_3[2].inner_text
-      @nishitetsu_fromHakata_toUniversity4 = elements4_3[3].inner_text
-      t3 = elements4[3].inner_text
-      t4 = elements4[2].inner_text
-      t5 = elements4_3[2].inner_text
-      t6 = elements4_3[3].inner_text
-      second2 = Time.parse(t3) - Time.parse(t4)
-      second3 = Time.parse(t6) - Time.parse(t5)
-      @t7 = (second2 /60).floor
-      @t8 = (second3 /60).floor
+      @nishitetsu_toUniversity2_3 = @nishitetsu_toUniversity2 + "発 ➡ " + @nishitetsu_toUniversity3 + "着"
+      
+      @nishitetsu_fromHakata_toUniversity2 = elements4_3[2].inner_text
+      @nishitetsu_fromHakata_toUniversity3 = elements4_3[3].inner_text
+      @nishitetsu_fromHakata_toUniversity2_3 = @nishitetsu_fromHakata_toUniversity2 + "発 ➡ " + @nishitetsu_fromHakata_toUniversity3 + "着"
+
+      # t3 = elements4[3].inner_text
+      # t4 = elements4[2].inner_text
+      # t5 = elements4_3[2].inner_text
+      # t6 = elements4_3[3].inner_text
+      # second2 = Time.parse(t3) - Time.parse(t4)
+      # second3 = Time.parse(t6) - Time.parse(t5)
+      # @t7 = (second2 /60).floor
+      # @t8 = (second3 /60).floor
     else
-      @nishitetsu_toUniversity2 = ""
-      @nishitetsu_toUniversity3 = ""
+      @nishitetsu_toUniversity2_3 = ""
+      @nishitetsu_fromHakata_toUniversity2_3 = ""
     end
 
 
@@ -224,12 +234,12 @@ class HomeController < ApplicationController
     menu_lunch = page.search('td.lunch') #div.idxcol aは取得したい要素  elementsは任意の変数
     menu_dinner = page.search('td.dinner') #div.idxcol aは取得したい要素  elementsは任意の変数
 
-    # @today_menu_lunch = menu_lunch[4].inner_text
-    # @today_menu_dinner = menu_dinner[n].inner_text
+    @today_menu_lunch = menu_lunch[3*n-2].inner_text
+    @today_menu_dinner = menu_dinner[3*n-2].inner_text
     
   
-    @today_menu_lunch = menu_lunch[3*n-1].inner_text
-    @today_menu_dinner = menu_dinner[3*n-1].inner_text
+    # @today_menu_lunch = menu_lunch[3*n-1].inner_text
+    # @today_menu_dinner = menu_dinner[3*n-1].inner_text
 
    
     # shukujitsu = HolidayJapan.check(Date.today)

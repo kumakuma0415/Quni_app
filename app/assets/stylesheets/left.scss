@@ -1,3 +1,16 @@
+@media (min-width: 320px) {
+  main {
+    font-size: 0.7rem;
+  }
+  .left {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
+
+
 /* 疑似ヘッダー ================================ */
 .top-content {
   display: flex;
@@ -43,6 +56,10 @@
 .btn-rikei,.btn-cafe {
   color: #fff;
   background-color: #e3373d;
+}
+
+.btn-nishitetu {
+  margin: 5px 0;
 }
 
 .btn-campusmate:hover,.btn-moodle:hover,
@@ -121,6 +138,21 @@ ul {
   display: flex;
 }
 
+.cafe-btn-lists {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cafe-left {
+  width: 20%;
+}
+
+.cafe-right {
+  width: 80%;
+  display: flex;
+  flex: wrap;
+}
+
 .cafe-item2 {
   display: flex;
 }
@@ -154,14 +186,10 @@ ul {
   flex: wrap;
 }
 
-.cafe-lunch,
-.cafe-dinner {
-  display: flex;
-}
-
-.ikei-idou {
-  margin: 20px 0 0 30px;
-}
+// .cafe-lunch,
+// .cafe-dinner {
+//   display: flex;
+// }
 
 .cafe-main-theme,
 .shop-main-theme {
@@ -170,7 +198,7 @@ ul {
 }
 
 .shop-main-theme-east {
-  margin-top: 0px;
+  margin-top: 20px;
   font-weight: bold;
 }
 
