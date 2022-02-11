@@ -195,8 +195,9 @@ ul {
 }
 
 .caution {
-  margin-left: 20px;
+  margin-bottom: 10px;
 }
+
 /* バス、図書館、学食、売店終了 ================================ */
 @media (min-width: 601px) {
   .br-sp {
@@ -223,6 +224,7 @@ ul {
   .library-items {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
   }
   .cafe-btn-list {
     width: 70%;
