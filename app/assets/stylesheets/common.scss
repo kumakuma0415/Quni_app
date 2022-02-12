@@ -6,7 +6,7 @@
 /* 共通レイアウト ================================ */
 body {
   color: #b10721;
-  background-color: #faf3e2;
+  background-color: #F0F2F5;
   margin: 0;
   min-height: 100vh;
   display: flex;
@@ -41,24 +41,32 @@ main {
 }
 
 .part {
-margin-bottom: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 1px 1px;
 }
 
 .left {
-float: left;
-width: 65%;
+  float: left;
+  width: 74%;
 }
 
 .right {
-float: right;
-width: 30%;
-position: fixed;
-right: 25px;
-border-style: solid;
-padding: 5px;
+  float: right;
+  width: 24%;
+  position: fixed;
+  right: 21px;
+  // border-style: solid;
+  padding: 5px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 1px 1px;
+  margin-left: 10px;
 }
 
 p {
-color: black;
+  color: black;
 }
 /* 構成終了 ================================ */

@@ -9,7 +9,8 @@ class HomeController < ApplicationController
 
     # 今日の年月日
     dt = Time.now
-    dt2 = dt + 60*60*9
+    # dt2 = dt + 60*60*9
+    dt2 = dt
     num_dt = dt.strftime("%Y%m%d")   # 例)2022/01/26 → 20220126
     num_dt2 = dt2.strftime("%H%M")  # 例)14:47 → 1447
     num_dt3 = dt.strftime("%H")  # 例)14:47 → 1447
@@ -139,8 +140,8 @@ class HomeController < ApplicationController
       # # 不安要素
       # @nishitetsu_price2 = elements4_2[0].inner_text
     else
-      @nishitetsu_toUniversity0_1 = "今日はは終了しました"
-      @nishitetsu_fromHakata_toUniversity0_1 = "今日はは終了しました"
+      @nishitetsu_toUniversity0_1 = "今日は終了しました"
+      @nishitetsu_fromHakata_toUniversity0_1 = "今日は終了しました"
     end
 
     
@@ -445,9 +446,9 @@ class HomeController < ApplicationController
     if params[:username] != "" || params[:content] != ""
       @post = Post.new(content: params[:content], username: params[:username])
       @post.save
-      redirect_to("/top")
+      redirect_to("/")
     else
-      redirect_to("/top")
+      redirect_to("/")
     end
   end
 

@@ -3,9 +3,9 @@
   display: flex;
 }
 
-.site-list {
-  display: flex;
-}
+// .site-list {
+//   display: flex;
+// }
 
 .site-list li {
   margin-right: 10px;
@@ -45,7 +45,13 @@
   background-color: #e3373d;
 }
 
+.btn-chuou {
+  margin: 5px 0;
+}
+
 .btn-nishitetu {
+  height: 10px;
+  width: 90px;
   margin: 5px 0;
 }
 
@@ -70,7 +76,7 @@
 }
 
 .time-margin {
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 ul {
@@ -88,6 +94,10 @@ ul {
 .nishitetsu {
   width: 60%;
 }
+
+.br-sp2 {
+  display: none;
+}
 /* バス終了 ================================ */
 
 
@@ -98,7 +108,7 @@ ul {
 .library,
 .cafe,
 .shop {
-  border-style: solid;
+  // border-style: solid;
   padding: 5px;
   
 }
@@ -107,9 +117,12 @@ ul {
   display: flex;
 }
 
-.cafe,
+.cafe {
+  width: 57%;
+}
+
 .shop {
-  width: 50%;
+  width: 43%;
 }
 
 .bus-item,
@@ -117,6 +130,10 @@ ul {
 .cafe-item,
 .shop-item {
   margin: 5px;
+}
+
+.library-item {
+  display: flex;
 }
 
 .cafe-item,
@@ -154,7 +171,9 @@ ul {
 
 .library-items {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 130px;
 }
 
 // .cafe-big-items {
@@ -199,15 +218,31 @@ ul {
 }
 
 /* バス、図書館、学食、売店終了 ================================ */
+// @media (max-width: 1154px) {
+//   .br-sp {
+//     display: none;
+//   }
+// }
+
 @media (min-width: 601px) {
   .br-sp {
     display: none;
   }
 }
 
+@media (max-width: 985px) {
+  .library-items {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 600px) {
+  body {
+    margin-right: 20px;
+  }
   main {
-    font-size: 0.4rem;
+    font-size: 0.7rem;
   }
   .left {
     width: 100%;
@@ -221,17 +256,19 @@ ul {
   .company-items {
     display: block;
   }
-  .library-items {
+  .bus-items.s {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
   }
+  .bus-item.s {
+    width: 210px;
+  }
+
   .cafe-btn-list {
     width: 70%;
     display: flex;
-    flex-wrap: wrap;
     margin: 0;
   }
+
   .cafe-shop {
     display: block;
   }
@@ -244,4 +281,47 @@ ul {
   .caution {
     margin-top: 5px;
   }
+}
+
+@media (max-width: 533px) {
+
+  .library-items {
+    height: auto;
+  }
+
+  .cafe-btn-list {
+    width: 70%;
+    display: flex;
+    margin: 0;
+  }
+
+  .left {
+    margin-right: 5px;
+  }
+
+  .btn-chuou {
+    width: 100px;
+  }
+}
+
+@media (max-width: 380px) {
+  .br-sp2 {
+    display: block;
+  }
+
+  .library-btn-list.l {
+    width: 80px;
+  }
+
+  .library-btn-list.m {
+    width: 120px;
+  }
+
+  span {
+    display: none;
+  }
+
+  // .library-item {
+  //   width: 110px;
+  // }
 }

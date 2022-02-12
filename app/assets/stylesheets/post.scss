@@ -19,13 +19,20 @@
 .posts-index-item {
   width: 100%;
   padding: 10px 8px;
-  background-color: white;
+  background-color: #F0F2F5;
   overflow: hidden;
   box-shadow: 0 2px 6px #c1ced7;
 }
 
+input {
+  background-color: #F0F2F5;
+  border-radius: 10px;
+}
+
 textarea {
-    width: 100%;
-    border: 0px;
+  width: 100%;
+  border: 0px;
+  background-color: #F0F2F5;
+  border-radius: 10px;
 }
 /* 投稿機能終了 ================================ */
