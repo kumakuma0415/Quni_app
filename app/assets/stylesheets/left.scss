@@ -51,6 +51,10 @@
   background-color: #E4E6EB;
 }
 
+.btn-nishitetu2, .btn-chuou2 {
+  height: 20px;
+}
+
 .btn-chuou {
   margin: 5px 0;
 }
@@ -65,8 +69,14 @@
 .btn-seikyou:hover,.btn-showa:hover,
 .btn-nishitetu:hover,.btn-chuou:hover,
 .btn-rikei:hover,.btn-cafe:hover { 
-  color: #fff;
-  background-color: #b10721;
+  color: #1877F2;
+  background-color: #d7e3f0;
+}
+
+.btn-showa2:hover, .btn-nishitetu2:hover,
+.btn-chuou2:hover, .btn-cafe2:hover {
+  color: black;
+  background-color: #d8dadf;
 }
 
 /* ボタン終了 ================================ */
