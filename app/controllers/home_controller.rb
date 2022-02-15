@@ -1,7 +1,6 @@
 require "date"
 require "time"
 require "./app/models/scraping.rb"
-# require 'holiday_japan'
 
 class HomeController < ApplicationController
 
@@ -22,12 +21,6 @@ class HomeController < ApplicationController
     @hp_showa_toStation = "https://transfer.navitime.biz/showa-bus/extif/TransferSearchIF?startName=九大ビッグオレンジ&goalName=九大学研都市駅&start=00087910&goal=00291944&date=" + num_dt + num_dt2 + "&device=pc&month_=2022%2F01%2F26&hour=9&minute=23&basis=1&sort=0"
     @hp_showa_toUniversity = "https://transfer.navitime.biz/showa-bus/extif/TransferSearchIF?startName=九大学研都市駅&goalName=九大ビッグオレンジ&start=00291944&goal=00087910&date=" + num_dt + num_dt2 + "&device=pc&month_=2022%2F01%2F27&hour=10&minute=42&basis=1&sort=0"
 
-
-    # 関数にしてきれいにする
-    # scrape_showa_toStation = Scraping.scrape_showa_toStation
-    # scrape_showa_toStation
-    # scrape_showa_toUniversity = Scraping.scrape_showa_toUniversity
-    # scrape_showa_toUniversity
 
     # 九大ビッグオレンジ～九大学研都市駅
     agent = Mechanize.new                  #agentは任意の変数
@@ -59,8 +52,6 @@ class HomeController < ApplicationController
     @hp_nishitetsu_fromHakata_toUniversity = "https://jik.nishitetsu.jp/route?f_zahyo_flg=0&f_list=0000%2CD00202&t_zahyo_flg=0&t_list=0001%2C563169&rightnow_flg=2&sdate=2022%2F02%2F01&stime_h=12&stime_m=15&stime_flg=1&jkn_busnavi=1&syosaiFlg=0"
 
 
-    # 関数にしてきれいにする
-
 
     # 九大ビッグオレンジ～天神ソラリア～博多駅
     agent3 = Mechanize.new                  #agentは任意の変数
@@ -68,24 +59,13 @@ class HomeController < ApplicationController
     page_nishitetsu_toHakata = agent3.get(@hp_nishitetsu_toHakata)  #pageは任意の変数 getの引数はサイトのURL
     elements3 = page_nishitetsu_toTenjin.search('.item .time span') #div.idxcol aは取得したい要素  elementsは任意の変数
     elements3_3 = page_nishitetsu_toHakata.search('.item .time span') #div.idxcol aは取得したい要素  elementsは任意の変数
-    # elements3_2 = page_nishitetsu_toTenjin.search('.price span') #div.idxcol aは取得したい要素  elementsは任意の変数
-
+    
     if elements3[0]
       @nishitetsu_toTenjin0 = elements3[0].inner_text
       @nishitetsu_toTenjin1 = elements3[1].inner_text
       @nishitetsu_toTenjin0_1 = @nishitetsu_toTenjin0 + "発 ➡ " + @nishitetsu_toTenjin1 + "着"
       @nishitetsu_toHakata1 = elements3_3[1].inner_text
       @nishitetsu_toHakata0_1 = @nishitetsu_toTenjin0 + "発 ➡ " + @nishitetsu_toHakata1 + "着"
-      
-
-      # 乗車時間の掲示
-      # t1 = elements3[1].inner_text
-      # t2 = elements3[0].inner_text
-      # t3 = elements3_3[1].inner_text
-      # second1 = Time.parse(t1) - Time.parse(t2)
-      # second2 = Time.parse(t3) - Time.parse(t2)
-      # @t = (second1 /60).floor
-      # @t2 = (second2 /60).floor
     else
       @nishitetsu_toTenjin0_1 = "今日は終了しました"
       @nishitetsu_toHakata0_1 = "今日は終了しました"
@@ -97,18 +77,9 @@ class HomeController < ApplicationController
       @nishitetsu_toTenjin2_3 = @nishitetsu_toTenjin2 + "発 ➡ " + @nishitetsu_toTenjin3 + "着"
       @nishitetsu_toHakata3 = elements3_3[3].inner_text
       @nishitetsu_toHakata2_3 = @nishitetsu_toTenjin2 + "発 ➡ " + @nishitetsu_toHakata3 + "着"
-      # t4 = elements3[3].inner_text
-      # t5 = elements3[2].inner_text
-      # t6 = elements3_3[3].inner_text
-      # second3 = Time.parse(t4) - Time.parse(t5)
-      # second4 = Time.parse(t6) - Time.parse(t5)
-      # @t3 = (second3 /60).floor
-      # @t4 = (second4 /60).floor
-      # @nishitetsu_price = elements3_2[0].inner_text
-   else
-    @nishitetsu_toTenjin2_3 = ""
-    @nishitetsu_toHakata2_3 = ""
-   end
+      @nishitetsu_toTenjin2_3 = ""
+      @nishitetsu_toHakata2_3 = ""
+    end
 
     
 
@@ -128,17 +99,6 @@ class HomeController < ApplicationController
       @nishitetsu_fromHakata_toUniversity0 = elements4_3[0].inner_text
       @nishitetsu_fromHakata_toUniversity1 = elements4_3[1].inner_text
       @nishitetsu_fromHakata_toUniversity0_1 = @nishitetsu_fromHakata_toUniversity0 + "発 ➡ " + @nishitetsu_fromHakata_toUniversity1 + "着"
-      
-      # t7 = elements4[1].inner_text
-      # t8 = elements4[0].inner_text
-      # t9 = elements4_3[0].inner_text
-      # t10 = elements4_3[1].inner_text
-      # second3 = Time.parse(t7) - Time.parse(t8)
-      # second4 = Time.parse(t10) - Time.parse(t9)
-      # @t5 = (second3 /60).floor
-      # @t6 = (second4 /60).floor
-      # # 不安要素
-      # @nishitetsu_price2 = elements4_2[0].inner_text
     else
       @nishitetsu_toUniversity0_1 = "今日は終了しました"
       @nishitetsu_fromHakata_toUniversity0_1 = "今日は終了しました"
@@ -153,15 +113,6 @@ class HomeController < ApplicationController
       @nishitetsu_fromHakata_toUniversity2 = elements4_3[2].inner_text
       @nishitetsu_fromHakata_toUniversity3 = elements4_3[3].inner_text
       @nishitetsu_fromHakata_toUniversity2_3 = @nishitetsu_fromHakata_toUniversity2 + "発 ➡ " + @nishitetsu_fromHakata_toUniversity3 + "着"
-
-      # t3 = elements4[3].inner_text
-      # t4 = elements4[2].inner_text
-      # t5 = elements4_3[2].inner_text
-      # t6 = elements4_3[3].inner_text
-      # second2 = Time.parse(t3) - Time.parse(t4)
-      # second3 = Time.parse(t6) - Time.parse(t5)
-      # @t7 = (second2 /60).floor
-      # @t8 = (second3 /60).floor
     else
       @nishitetsu_toUniversity2_3 = ""
       @nishitetsu_fromHakata_toUniversity2_3 = ""
@@ -214,22 +165,6 @@ class HomeController < ApplicationController
     x = (Date.today.next_week(:sunday) - base_day).to_i
     y = x / 7
 
-    # データベースを更新するか否か
-    # teishoku = TeishokuMenu.find_by(id: 3*n -1 + 18*y)
-    # k = teishoku.created_at
-    # if Date.today - k.to_date >= 7
-    # # if Date.today - k.to_date >= 10
-    #   scrape_lunch = Scraping.scrape_lunch
-    #   scrape_lunch
-    #   scrape_dinner = Scraping.scrape_dinner
-    #   scrape_dinner
-    # end
-
-    # 今日の定食の表示
-    # menu_lunch = TeishokuMenu.find_by(id: 3*n-1 + 18 * y )
-    # menu_dinner = TeishokuMenu2.find_by(id: 3*n-1 + 15 * y + 3)
-
-
     agent = Mechanize.new                  #agentは任意の変数
     page = agent.get("http://www.coop.kyushu-u.ac.jp/teishoku220207.html")  #pageは任意の変数 getの引数はサイトのURL
     menu_lunch = page.search('td.lunch') #div.idxcol aは取得したい要素  elementsは任意の変数
@@ -237,13 +172,6 @@ class HomeController < ApplicationController
 
     @today_menu_lunch = menu_lunch[3*n-2].inner_text
     @today_menu_dinner = menu_dinner[3*n-2].inner_text
-    
-  
-    # @today_menu_lunch = menu_lunch[3*n-1].inner_text
-    # @today_menu_dinner = menu_dinner[3*n-1].inner_text
-
-   
-    # shukujitsu = HolidayJapan.check(Date.today)
     
 
     # 各学食の営業時間を表示
@@ -432,13 +360,6 @@ class HomeController < ApplicationController
     else
       @open_time_tikushi = "Close"
     end
-
-
-
-    # if @post.save
-    #   flash[:notice] = "投稿しました！"
-    # end
-
   end
 
   # 投稿をしたときの処理

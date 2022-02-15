@@ -3,10 +3,6 @@
   display: flex;
 }
 
-// .site-list {
-//   display: flex;
-// }
-
 .site-list li {
   margin-right: 10px;
   margin-bottom: 20px;
@@ -192,26 +188,10 @@ ul {
   height: 130px;
 }
 
-// .cafe-big-items {
-//   display: flex;
-//   flex-wrap: wrap;
-// }
-// .cafe-items,
-// .shop-items {
-//   // display: flex;
-//   // flex-wrap: wrap;
-//   // justify-content: space-around;
-// }
-
 .cafe-btn-lists {
   display: flex;
   flex: wrap;
 }
-
-// .cafe-lunch,
-// .cafe-dinner {
-//   display: flex;
-// }
 
 .cafe-main-theme,
 .shop-main-theme {
@@ -234,12 +214,9 @@ ul {
 }
 
 /* バス、図書館、学食、売店終了 ================================ */
-// @media (max-width: 1154px) {
-//   .br-sp {
-//     display: none;
-//   }
-// }
 
+
+/* メディアアクエリ ================================ */
 @media (min-width: 601px) {
   .br-sp {
     display: none;
@@ -336,8 +313,5 @@ ul {
   span {
     display: none;
   }
-
-  // .library-item {
-  //   width: 110px;
-  // }
 }
+/* メディアアクエリ終了 ================================ */
