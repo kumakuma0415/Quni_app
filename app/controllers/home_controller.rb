@@ -8,8 +8,10 @@ class HomeController < ApplicationController
 
     # 今日の年月日
     dt = Time.now
-    # dt2 = dt + 60*60*9
-    dt2 = dt
+    # heroku 用？？
+    dt2 = dt + 60*60*9
+    # localhost:3000 用？？
+    # dt2 = dt
     num_dt = dt.strftime("%Y%m%d")   # 例)2022/01/26 → 20220126
     num_dt2 = dt2.strftime("%H%M")  # 例)14:47 → 1447
     num_dt3 = dt.strftime("%H")  # 例)14:47 → 1447

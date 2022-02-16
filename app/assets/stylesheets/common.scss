@@ -45,7 +45,10 @@ main {
   margin-right: 20px;
   background-color: #FFFFFF;
   border-radius: 10px;
-  box-shadow: 1px 1px grey;
+  border:1px solid #ded8d8;
+  box-shadow:rgba(5, 5, 5, 0.0588235) 0px 0px 6px 3px;
+  -webkit-box-shadow:rgba(5, 5, 5, 0.0588235) 0px 0px 6px 3px;
+  -moz-box-shadow:rgba(5, 5, 5, 0.0588235) 0px 0px 6px 3px;
 }
 
 .left {
@@ -61,11 +64,19 @@ main {
   padding: 5px;
   background-color: #FFFFFF;
   border-radius: 10px;
-  box-shadow: 1px 1px;
+  border:1px solid #ded8d8;
+  box-shadow:rgba(5, 5, 5, 0.0588235) 0px 0px 6px 3px;
+  -webkit-box-shadow:rgba(5, 5, 5, 0.0588235) 0px 0px 6px 3px;
+  -moz-box-shadow:rgba(5, 5, 5, 0.0588235) 0px 0px 6px 3px;
   margin-left: 10px;
+  height: 96vh;
 }
 
 p {
   color: black;
+}
+
+h2 {
+  color: #1361c2;
 }
 /* 構成終了 ================================ */

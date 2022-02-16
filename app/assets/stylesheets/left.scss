@@ -41,6 +41,11 @@
   background-color: #e7f3ff;
 }
 
+.btn-campusmate,.btn-moodle,
+.btn-seikyou {
+  background-color: #9ec8f4;
+}
+
 .btn-showa2, .btn-nishitetu2,
 .btn-chuou2, .btn-cafe2 {
   color: black;
@@ -67,6 +72,11 @@
 .btn-rikei:hover,.btn-cafe:hover { 
   color: #1877F2;
   background-color: #d7e3f0;
+}
+
+.btn-campusmate:hover,.btn-moodle:hover,
+.btn-seikyou:hover {
+  background-color: #89aed6;
 }
 
 .btn-showa2:hover, .btn-nishitetu2:hover,
