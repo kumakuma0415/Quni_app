@@ -64,3 +64,7 @@ gem 'nokogiri'
 
 gem 'open-uri'
 gem 'pdf-reader'
+
+
+gem 'sitemap_generator' #サイトマップ作成用
+gem 'aws-sdk' #AWS接続用
