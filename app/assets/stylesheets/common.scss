@@ -40,22 +40,13 @@ main {
   margin-bottom: 20px;
 }
 
-.part {
-  margin-bottom: 10px;
-  margin-right: 10px;
-  background-color: #FFFFFF;
-  border-radius: 10px;
-  border:1px solid #ded8d8;
-  box-shadow:rgba(5, 5, 5, 0.0588235) 0px 0px 6px 3px;
-  -webkit-box-shadow:rgba(5, 5, 5, 0.0588235) 0px 0px 6px 3px;
-  -moz-box-shadow:rgba(5, 5, 5, 0.0588235) 0px 0px 6px 3px;
-}
-
+// 「バス」「図書館」「売店」「学食」のセクションをまとめたもの
 .left {
   float: left;
   width: 74%;
 }
 
+// 「投稿」セクション
 .right {
   float: right;
   width: 24%;
@@ -72,10 +63,24 @@ main {
   height: 96vh;
 }
 
+
+// 各セクション（バス、図書館等）
+.part {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  border:1px solid #ded8d8;
+  box-shadow:rgba(5, 5, 5, 0.0588235) 0px 0px 6px 3px;
+  -webkit-box-shadow:rgba(5, 5, 5, 0.0588235) 0px 0px 6px 3px;
+  -moz-box-shadow:rgba(5, 5, 5, 0.0588235) 0px 0px 6px 3px;
+}
+
+
+// 文字の色の基本設定
 p {
   color: black;
 }
-
 h2 {
   color: #1361c2;
 }

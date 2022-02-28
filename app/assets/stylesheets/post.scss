@@ -4,17 +4,20 @@
   margin-bottom: 10px;
 }
 
+// つぶやきのまとまり
 .posts-index-items {
   overflow-y: scroll;
-  height: 300px;
+  max-height: 315px;
   width: 100%;
   margin-bottom: 10px;
 }
 
+// 重要ではないところの文字を小さくする
 .post-detail {
   font-size: 0.5rem;
 }
 
+// 各つぶやき
 .posts-index-item {
   width: 100%;
   padding: 10px 8px;
@@ -23,11 +26,12 @@
   box-shadow: 0 1px 1px grey;
 }
 
+// ユーザー名
 input {
   background-color: #F0F2F5;
   border-radius: 10px;
 }
-
+// つぶやく内容
 textarea {
   width: 100%;
   border: 0px;

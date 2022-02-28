@@ -1,0 +1,80 @@
+/* ボタン ================================ */
+
+// ボタンの基本的な設定
+.small-btn {
+    font-size: .1rem;
+    font-weight: 600;
+    line-height: .1;
+    position: relative;
+    display: inline-block;
+    padding: 0.6rem 0.6rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #212529;
+    border-radius: 0.5rem;
+  }
+  
+  
+  // ボタンの色の設定
+  .btn-campusmate,.btn-moodle,
+  .btn-seikyou,.btn-showa,
+  .btn-nishitetu,.btn-chuou,
+  .btn-rikei,.btn-cafe {
+    color: #1877F2;
+    background-color: #e7f3ff;
+  }
+  .btn-campusmate,.btn-moodle,
+  .btn-seikyou {
+    background-color: #9ec8f4;
+  }
+  .btn-showa2, .btn-nishitetu2,
+  .btn-chuou2, .btn-cafe2 {
+    color: black;
+    background-color: #E4E6EB;
+  }
+  
+  
+  // その他　ボタンの微調整
+  .btn-nishitetu2, .btn-chuou2 {
+    height: 20px;
+  }
+  .btn-chuou {
+    margin: 5px 0;
+  }
+  .btn-nishitetu {
+    height: 10px;
+    width: 90px;
+    margin: 5px 0;
+  }
+  
+  
+  // ボタンにhoverしたとき
+  .btn-campusmate:hover,.btn-moodle:hover,
+  .btn-seikyou:hover,.btn-showa:hover,
+  .btn-nishitetu:hover,.btn-chuou:hover,
+  .btn-rikei:hover,.btn-cafe:hover { 
+    color: #1877F2;
+    background-color: #d7e3f0;
+  }
+  
+  .btn-campusmate:hover,.btn-moodle:hover,
+  .btn-seikyou:hover {
+    background-color: #89aed6;
+  }
+  
+  .btn-showa2:hover, .btn-nishitetu2:hover,
+  .btn-chuou2:hover, .btn-cafe2:hover {
+    color: black;
+    background-color: #d8dadf;
+  }
+  
+  /* ボタン終了 ================================ */

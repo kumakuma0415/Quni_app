@@ -12,8 +12,8 @@
     </script>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,
-    initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    
     <title>九大攻略</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -21,15 +21,15 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   
+    <%# サイトのアイコン %>
     <%= favicon_link_tag 'favicon.ico'%>
-    <%# <%= favicon_link_tag 'Q.png', rel: 'apple-touch-icon', sizes: '180x180', type: 'image/png' %>
-    <%# <%= favicon_link_tag 'Q.png', rel: 'android-touch-icon', sizes: '192x192', type: 'image/png' %>
 
     <meta name="google-site-verification" content="cHrG-FBSLC2N9qxbZFuYiMwTTB5BJxod77if4gwf34g" />
   </head>
 
   <body>
     <main>
+      <%# yieldはhome/top.html.erbの中身 %>
       <%= yield %>
     </main>
   </body>

@@ -1,129 +1,22 @@
-/* 疑似ヘッダー ================================ */
+/* 簡素なヘッダー ================================ */
+
+// サイトの名前とボタンを一列に揃える
 .top-content {
   display: flex;
 }
 
+// ボタン同士の間隔を作る
 .site-list li {
   margin-right: 10px;
   margin-bottom: 20px;
 }
-/* 疑似ヘッダー終了 ================================ */
+
+/* 簡素なヘッダー終了 ================================ */
 
 
-/* ボタン ================================ */
-.small-btn {
-  font-size: .1rem;
-  font-weight: 600;
-  line-height: .1;
-  position: relative;
-  display: inline-block;
-  padding: 0.6rem 0.6rem;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-  letter-spacing: 0.1em;
-  color: #212529;
-  border-radius: 0.5rem;
-}
+/* バス、図書館、学食、売店 共通のデザイン ================================ */
 
-.btn-campusmate,.btn-moodle,
-.btn-seikyou,.btn-showa,
-.btn-nishitetu,.btn-chuou,
-.btn-rikei,.btn-cafe {
-  color: #1877F2;
-  background-color: #e7f3ff;
-}
-
-.btn-campusmate,.btn-moodle,
-.btn-seikyou {
-  background-color: #9ec8f4;
-}
-
-.btn-showa2, .btn-nishitetu2,
-.btn-chuou2, .btn-cafe2 {
-  color: black;
-  background-color: #E4E6EB;
-}
-
-.btn-nishitetu2, .btn-chuou2 {
-  height: 20px;
-}
-
-.btn-chuou {
-  margin: 5px 0;
-}
-
-.btn-nishitetu {
-  height: 10px;
-  width: 90px;
-  margin: 5px 0;
-}
-
-.btn-campusmate:hover,.btn-moodle:hover,
-.btn-seikyou:hover,.btn-showa:hover,
-.btn-nishitetu:hover,.btn-chuou:hover,
-.btn-rikei:hover,.btn-cafe:hover { 
-  color: #1877F2;
-  background-color: #d7e3f0;
-}
-
-.btn-campusmate:hover,.btn-moodle:hover,
-.btn-seikyou:hover {
-  background-color: #89aed6;
-}
-
-.btn-showa2:hover, .btn-nishitetu2:hover,
-.btn-chuou2:hover, .btn-cafe2:hover {
-  color: black;
-  background-color: #d8dadf;
-}
-
-/* ボタン終了 ================================ */
-
-
-/* バス ================================ */
-.company-items {
-  display: flex;
-}
-
-.btn-time {
-  display: flex;
-}
-
-.time-margin {
-  margin-left: 5px;
-}
-
-ul {
-  display: flex;
-}
-
-.bus-item {
-  margin-bottom: 15px;
-}
-
-.showa {
-  width: 40%;
-}
-
-.nishitetsu {
-  width: 60%;
-}
-
-.br-sp2 {
-  display: none;
-}
-/* バス終了 ================================ */
-
-
-/* バス、図書館、学食、売店 ================================ */
+// 各セクションにpaddingをつける
 .wrdbus,
 .showa,
 .nishitetsu,
@@ -131,21 +24,9 @@ ul {
 .cafe,
 .shop {
   padding: 15px;
-  
 }
 
-.cafe-shop {
-  display: flex;
-}
-
-.cafe {
-  width: 57%;
-}
-
-.shop {
-  width: 43%;
-}
-
+// 各セクション内の中の情報の間に空間を作る。
 .bus-item,
 .library-item,
 .cafe-item,
@@ -153,35 +34,7 @@ ul {
   margin: 5px;
 }
 
-.library-item {
-  display: flex;
-}
-
-.cafe-item,
-.shop-item {
-  margin-left: 20px;
-  display: flex;
-}
-
-.cafe-btn-lists {
-  display: flex;
-  justify-content: space-around;
-}
-
-.cafe-left {
-  width: 20%;
-}
-
-.cafe-right {
-  width: 80%;
-  display: flex;
-  flex: wrap;
-}
-
-.cafe-item2 {
-  display: flex;
-}
-
+// 各セクションのテーマを太字にする
 .bus-theme,
 .library-theme,
 .cafe-theme,
@@ -189,7 +42,46 @@ ul {
   font-weight: bold;
 }
 
+/* バス、図書館、学食、売店 共通のデザイン終了 ================================ */
 
+
+/* バス ================================ */
+
+// ２つのバス会社をひっくるめたボックス
+.company-items {
+  display: flex;
+}
+
+// そのボックス間で、昭和バスと西鉄バスの割合
+.showa {
+  width: 45%;
+}
+.nishitetsu {
+  width: 55%;
+}
+
+
+// 時刻表を見るボタンと時刻表を一列に揃える
+.btn-time {
+  display: flex;
+}
+
+// 時刻表を見るボタンと時刻表の間に空間を作り見やすくする
+.time-margin {
+  margin-left: 5px;
+}
+
+/* バス終了 ================================ */
+
+
+/* 図書館 ================================ */
+
+// １つの図書館の情報を一列にまとめる
+.library-item {
+  display: flex;
+}
+
+// すべての図書館をひとまとまりにする
 .library-items {
   display: flex;
   flex-direction: column;
@@ -197,130 +89,50 @@ ul {
   height: 130px;
 }
 
-.cafe-btn-lists {
-  display: flex;
-  flex: wrap;
+// 図書館セクション内のボタン
+.library-btn-list {
+  margin: 5px 4px;
 }
 
+/* 図書館終了 ================================ */
+
+
+/* 学食、売店 ================================ */
+
+// 学食と売店をまとめたボックス
+.cafe-shop {
+  display: flex;
+}
+// そのボックス間で、学食と売店の割合
+.cafe {
+  width: 50%;
+}
+.shop {
+  width: 50%;
+}
+
+// １つの学食（売店）に対して
+.cafe-item,
+.shop-item {
+  margin-left: 20px;
+  display: flex;
+}
+
+//「学食」「売店」のゾーン・キャンパスを表示（伊都　センターゾーン）
 .cafe-main-theme,
 .shop-main-theme {
   margin-top: 10px;
   font-weight: bold;
 }
-
 .shop-main-theme-east {
   margin-top: 20px;
   font-weight: bold;
 }
 
-.library-btn-list,
-.cafe-btn-list {
-  margin: 5px 4px;
-}
-
+// 注釈
 .caution {
   margin-bottom: 10px;
+  font-size: 80%;
 }
 
-/* バス、図書館、学食、売店終了 ================================ */
-
-
-/* メディアアクエリ ================================ */
-@media (min-width: 601px) {
-  .br-sp {
-    display: none;
-  }
-}
-
-@media (max-width: 985px) {
-  .library-items {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 600px) {
-  body {
-    margin-right: 20px;
-  }
-  main {
-    font-size: 0.7rem;
-  }
-  .left {
-    width: 100%;
-  }
-  .right {
-    display: none;
-  }
-  .small-btn {
-    font-size: 0.1rem;
-  }
-  .company-items {
-    display: block;
-  }
-  .bus-items.s {
-    display: flex;
-  }
-  .bus-item.s {
-    width: 210px;
-  }
-
-  .cafe-btn-list {
-    width: 70%;
-    display: flex;
-    margin: 0;
-  }
-
-  .cafe-shop {
-    display: block;
-  }
-  .part {
-    width: 100%;
-  }
-  .n-sp {
-    display: none;
-  }
-  .caution {
-    margin-top: 5px;
-  }
-}
-
-@media (max-width: 533px) {
-
-  .library-items {
-    height: auto;
-  }
-
-  .cafe-btn-list {
-    width: 70%;
-    display: flex;
-    margin: 0;
-  }
-
-  .left {
-    margin-right: 5px;
-  }
-
-  .btn-chuou {
-    width: 100px;
-  }
-}
-
-@media (max-width: 380px) {
-  .br-sp2 {
-    display: block;
-  }
-
-  .library-btn-list.l {
-    width: 80px;
-  }
-
-  .library-btn-list.m {
-    width: 120px;
-  }
-
-  span {
-    display: none;
-  }
-}
-/* メディアアクエリ終了 ================================ */
+/* 学食、売店終了 ================================ */

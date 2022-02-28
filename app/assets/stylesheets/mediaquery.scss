@@ -1,0 +1,107 @@
+/* メディアクエリ ================================ */
+
+@media (min-width: 601px) {
+    .br-sp {
+        display: none;
+    }
+}
+
+@media (max-width: 985px) {
+    .library-items {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        font-size: 0.7rem;
+        margin-left: 10px;
+    }
+    .left {
+        width: 95%;
+    }
+    .right {
+        display: none;
+    }
+    .small-btn {
+        font-size: 0.1rem;
+    }
+    .company-items {
+        display: block;
+    }
+    .bus-items.s {
+        display: flex;
+    }
+    .bus-item.s {
+        width: 210px;
+    }
+
+    .cafe-btn-list {
+        width: 70%;
+        display: flex;
+        margin: 0;
+    }
+
+    .cafe-shop {
+        display: block;
+    }
+    .part {
+        width: 100%;
+    }
+    .n-sp {
+        display: none;
+    }
+    .caution {
+        margin-top: 5px;
+    }
+    .small-btn {
+        font-size: 0.3rem;
+    }
+}
+
+@media (max-width: 533px) {
+
+    .library-items {
+        height: auto;
+    }
+
+    .cafe-btn-list {
+        width: 70%;
+        display: flex;
+        margin: 0;
+    }
+
+    .left {
+        margin-right: 5px;
+    }
+
+    .btn-chuou {
+        width: 100px;
+    }
+}
+
+// 画面の大きさに応じて"　"を作るか否か判断
+// パソコンの画面は"　"を作らない　スマホの画面では作る
+.br-sp2 {
+    display: none;
+}
+
+@media (max-width: 380px) {
+    .br-sp2 {
+        display: block;
+    }
+
+    .library-btn-list.l {
+        width: 80px;
+    }
+
+    .library-btn-list.m {
+        width: 120px;
+    }
+
+    span {
+        display: none;
+    }
+}
+  /* メディアアクエリ終了 ================================ */
